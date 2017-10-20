@@ -1,0 +1,15 @@
+{
+  "name": "synechocystis-pathways",
+  "version": "1.0.0",
+  "description": "",
+  "main": "js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parser": "^1.11.0",
+    "xml2js": "^0.4.19"
+  }
+}

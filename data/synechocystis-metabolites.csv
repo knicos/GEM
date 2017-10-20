@@ -1,0 +1,602 @@
+entry,kegg,comp,name,chebi,uncharged_formula,formula,charge,external
+B0_[ext],-,ext,Biomass,-,R,-,-,True
+B1_[cyt],-,cyt,Protein component of biomass,-,R,-,-,False
+B2_[cyt],-,cyt,DNA component of biomass,-,R,-,-,False
+B3_[cyt],-,cyt,RNA component of biomass,-,R,-,-,False
+B4_[cyt],-,cyt,Cell wall component of biomass,-,R,-,-,False
+B5_[cyt],-,cyt,Lipid component of biomass,-,R,-,-,False
+B6_[cyt],-,cyt,Soluble pool component of biomass,-,R,-,-,False
+B7_[cyt],-,cyt,inorganic Ion component of biomass,-,R,-,-,False
+B8_[cyt],-,cyt,Pigment component of biomass,-,R,-,-,False
+C00001_[cax],C00001,cax,H2O,15377,H2O,H2O,0,False
+C00001_[cyt],C00001,cyt,H2O,15377,H2O,H2O,0,False
+C00001_[ext],C00001,ext,H2O,15377,H2O,H2O,0,True
+C00001_[pps],C00001,pps,H2O,15377,H2O,H2O,0,False
+C00001_[tll],C00001,tll,H2O,15377,H2O,H2O,0,False
+C00002_[cyt],C00002,cyt,ATP,15422,C10H16N5O13P3,C10H13N5O13P3,-3,False
+C00003_[cyt],C00003,cyt,NAD+,15846,C21H28N7O14P2,C21H26N7O14P2,-1,False
+C00004_[cyt],C00004,cyt,NADH,16908,C21H29N7O14P2,C21H27N7O14P2,-2,False
+C00005_[cyt],C00005,cyt,NADPH,16474,C21H30N7O17P3,C21H26N7O17P3,-4,False
+C00006_[cyt],C00006,cyt,NADP+,18009,C21H29N7O17P3,C21H25N7O17P3,-3,False
+C00007_[cax],C00007,cax,Oxygen,15379,O2,O2,0,False
+C00007_[cyt],C00007,cyt,Oxygen,15379,O2,O2,0,False
+C00007_[ext],C00007,ext,Oxygen,15379,O2,O2,0,True
+C00007_[pps],C00007,pps,Oxygen,15379,O2,O2,0,False
+C00007_[tll],C00007,tll,Oxygen,15379,O2,O2,0,False
+C00008_[cyt],C00008,cyt,ADP,16761,C10H15N5O10P2,C10H13N5O10P2,-2,False
+C00009_[cyt],C00009,cyt,Orthophosphate,18367,H3PO4,HO4P,-2,False
+C00009_[ext],C00009,ext,Orthophosphate,18367,H3PO4,HO4P,-2,True
+C00010_[cyt],C00010,cyt,CoA,15346,C21H36N7O16P3S,C21H32N7O16P3S,-4,False
+C00011_[cax],C00011,cax,CO2,16526,CO2,CO2,0,False
+C00011_[cyt],C00011,cyt,CO2,16526,CO2,CO2,0,False
+C00011_[ext],C00011,ext,CO2,16526,CO2,CO2,0,True
+C00011_[pps],C00011,pps,CO2,16526,CO2,CO2,0,False
+C00011_[tll],C00011,tll,CO2,16526,CO2,CO2,0,False
+C00013_[cyt],C00013,cyt,Diphosphate,29888,P2H4O7,HO7P2,-3,False
+C00014_[cyt],C00014,cyt,NH3,16134,NH3,H4N,1,False
+C00015_[cyt],C00015,cyt,UDP,17659,C9H14N2O12P2,C9H12N2O12P2,-2,False
+C00016_[cyt],C00016,cyt,FAD,16238,C27H33N9O15P2,C27H30N9O15P2,-3,False
+C00018_[cyt],C00018,cyt,Pyridoxal phosphate,18405,C8H10NO6P,C8H8NO6P,-2,False
+C00019_[cyt],C00019,cyt,S-Adenosyl-L-methionine,15414,C15H22N6O5S,C15H23N6O5S,1,False
+C00020_[cyt],C00020,cyt,AMP,16027,C10H14N5O7P,C10H12N5O7P,-2,False
+C00021_[cyt],C00021,cyt,S-Adenosyl-L-homocysteine,16680,C14H20N6O5S,C14H20N6O5S,0,False
+C00022_[cyt],C00022,cyt,Pyruvate,32816,C3H4O3,C3H3O3,-1,False
+C00024_[cyt],C00024,cyt,Acetyl-CoA,15351,C23H38N7O17P3S,C23H34N7O17P3S,-4,False
+C00025_[cyt],C00025,cyt,L-Glutamate,16015,C5H9NO4,C5H8NO4,-1,False
+C00025_[ext],C00025,ext,L-Glutamate,16015,C5H9NO4,C5H8NO4,-1,True
+C00026_[cyt],C00026,cyt,2-Oxoglutarate,30915,C5H6O5,C5H4O5,-2,False
+C00027_[cyt],C00027,cyt,H2O2,16240,H2O2,H2O2,0,False
+C00029_[cyt],C00029,cyt,UDP-glucose,18066,C15H24N2O17P2,C15H22N2O17P2,-2,False
+C00031_[cyt],C00031,cyt,D-Glucose,4167,C6H12O6,C6H12O6,0,False
+C00031_[ext],C00031,ext,D-Glucose,4167,C6H12O6,C6H12O6,0,True
+C00032_[cyt],C00032,cyt,Heme,17627,C34H32FeN4O4,C34FeH32N4O4,0,False
+C00033_[cyt],C00033,cyt,Acetate,15366,C2H4O2,C2H3O2,-1,False
+C00034_[cyt],C00034,cyt,Manganese,18291,Mn,Mn,0,False
+C00034_[ext],C00034,ext,Manganese,18291,Mn,Mn,0,True
+C00035_[cyt],C00035,cyt,GDP,17552,C10H15N5O11P2,C10H13N5O11P2,-2,False
+C00036_[cyt],C00036,cyt,Oxaloacetate,30744,C4H4O5,C4H2O5,-2,False
+C00037_[cyt],C00037,cyt,Glycine,15428,C2H5NO2,C2H5NO2,0,False
+C00038_[cyt],C00038,cyt,Zinc,29105,Zn,Zn,2,False
+C00038_[ext],C00038,ext,Zinc,29105,Zn,Zn,2,True
+C00041_[cyt],C00041,cyt,L-Alanine,16977,C3H7NO2,C3H7NO2,0,False
+C00042_[cyt],C00042,cyt,Succinate,15741,C4H6O4,C4H4O4,-2,False
+C00043_[cyt],C00043,cyt,UDP-N-acetyl-D-glucosamine,16264,C17H27N3O17P2,C17H25N3O17P2,-2,False
+C00044_[cyt],C00044,cyt,GTP,15996,C10H16N5O14P3,C10H13N5O14P3,-3,False
+C00047_[cyt],C00047,cyt,L-Lysine,18019,C6H14N2O2,C6H15N2O2,1,False
+C00048_[cyt],C00048,cyt,Glyoxylate,16891,C2H2O3,C2HO3,-1,False
+C00049_[cyt],C00049,cyt,L-Aspartate,17053,C4H7NO4,C4H6NO4,-1,False
+C00051_[cyt],C00051,cyt,Glutathione,16856,C10H17N3O6S,C10H16N3O6S,-1,False
+C00052_[cyt],C00052,cyt,UDP-D-galactose,18307,C15H24N2O17P2,C15H22N2O17P2,-2,False
+C00053_[cyt],C00053,cyt,3'-Phosphoadenylyl sulfate,17980,C10H15N5O13P2S,C10H11N5O13P2S,-4,False
+C00054_[cyt],C00054,cyt,"Adenosine 3',5'-bisphosphate",17985,C10H15N5O10P2,C10H11N5O10P2,-4,False
+C00055_[cyt],C00055,cyt,CMP,17361,C9H14N3O8P,C9H12N3O8P,-2,False
+C00058_[cyt],C00058,cyt,Formate,30751,CH2O2,CHO2,-1,False
+C00059_[cyt],C00059,cyt,Sulfate,16189,H2SO4,O4S,-2,False
+C00059_[ext],C00059,ext,Sulfate,16189,H2SO4,O4S,-2,True
+C00061_[cyt],C00061,cyt,FMN,17621,C17H21N4O9P,C17H18N4O9P,-3,False
+C00062_[cyt],C00062,cyt,L-Arginine,16467,C6H14N4O2,C6H15N4O2,1,False
+C00062_[ext],C00062,ext,L-Arginine,16467,C6H14N4O2,C6H15N4O2,1,True
+C00063_[cyt],C00063,cyt,CTP,17677,C9H16N3O14P3,C9H13N3O14P3,-3,False
+C00064_[cyt],C00064,cyt,L-Glutamine,18050,C5H10N2O3,C5H10N2O3,0,False
+C00064_[ext],C00064,ext,L-Glutamine,18050,C5H10N2O3,C5H10N2O3,0,True
+C00065_[cyt],C00065,cyt,L-Serine,17115,C3H7NO3,C3H7NO3,0,False
+C00068_[cyt],C00068,cyt,Thiamin diphosphate,9532,C12H19N4O7P2S,C12H17N4O7P2S,-1,False
+C00070_[cyt],C00070,cyt,Copper,28694,Cu,Cu,0,False
+C00070_[ext],C00070,ext,Copper,28694,Cu,Cu,0,True
+C00073_[cyt],C00073,cyt,L-Methionine,16643,C5H11NO2S,C5H11NO2S,0,False
+C00074_[cyt],C00074,cyt,Phosphoenolpyruvate,44897,C3H5O6P,C3H2O6P,-3,False
+C00075_[cyt],C00075,cyt,UTP,15713,C9H15N2O15P3,C9H12N2O15P3,-3,False
+C00076_[cyt],C00076,cyt,Calcium,29108,Ca,Ca,2,False
+C00076_[ext],C00076,ext,Calcium,29108,Ca,Ca,2,True
+C00077_[cyt],C00077,cyt,L-Ornithine,15729,C5H12N2O2,C5H13N2O2,1,False
+C00078_[cyt],C00078,cyt,L-Tryptophan,16828,C11H12N2O2,C11H12N2O2,0,False
+C00079_[cyt],C00079,cyt,L-Phenylalanine,17295,C9H11NO2,C9H11NO2,0,False
+C00080_[cax],C00080,cax,H+,15378,H,H,1,False
+C00080_[cyt],C00080,cyt,H+,15378,H,H,1,False
+C00080_[ext],C00080,ext,H+,15378,H,H,1,True
+C00080_[pps],C00080,pps,H+,15378,H,H,1,False
+C00080_[tll],C00080,tll,H+,15378,H,H,1,False
+C00082_[cyt],C00082,cyt,L-Tyrosine,17895,C9H11NO3,C9H11NO3,0,False
+C00083_[cyt],C00083,cyt,Malonyl-CoA,1553,C24H38N7O19P3S,C3H5O3,-1,False
+C00084_[cyt],C00084,cyt,Acetaldehyde,15343,C2H4O,C2H4O,0,False
+C00085_[cyt],C00085,cyt,D-Fructose 6-phosphate,15946,C6H13O9P,C6H11O9P,-2,False
+C00086_[cyt],C00086,cyt,Urea,16199,CH4N2O,CH4N2O,0,False
+C00086_[ext],C00086,ext,Urea,16199,CH4N2O,CH4N2O,0,True
+C00088_[cyt],C00088,cyt,Nitrite,16301,NO2-,NO2,-1,False
+C00089_[cyt],C00089,cyt,Sucrose,17992,C12H22O11,C12H22O11,0,False
+C00091_[cyt],C00091,cyt,Succinyl-CoA,15380,C25H40N7O19P3S,C25H35N7O19P3S,-5,False
+C00092_[cyt],C00092,cyt,D-Glucose 6-phosphate,4170,C6H13O9P,C6H11O9P,-2,False
+C00093_[cyt],C00093,cyt,sn-Glycerol 3-phosphate,15978,C3H9O6P,C3H7O6P,-2,False
+C00094_[cyt],C00094,cyt,Sulfite,48854,H2SO3,HO3S,-1,False
+C00095_[cyt],C00095,cyt,D-Fructose,15824,C6H12O6,C6H11O9P,-2,False
+C00096_[cyt],C00096,cyt,GDP-mannose,15820,C16H25N5O16P2,C16H23N5O16P2,-2,False
+C00097_[cyt],C00097,cyt,L-Cysteine,17561,C3H7NO2S,C3H7NO2S,0,False
+C00099_[cyt],C00099,cyt,beta-Alanine,16958,C3H7NO2,C3H7NO2,0,False
+C00101_[cyt],C00101,cyt,Tetrahydrofolate,15635,C19H23N7O6,C19H21N7O6,-2,False
+C00103_[cyt],C00103,cyt,D-Glucose 1-phosphate,16077,C6H13O9P,C6H11O9P,-2,False
+C00105_[cyt],C00105,cyt,UMP,16695,C9H13N2O9P,C9H11N2O9P,-2,False
+C00108_[cyt],C00108,cyt,Anthranilate,30754,C7H7NO2,C7H6NO2,-1,False
+C00109_[cyt],C00109,cyt,2-Oxobutanoate,30831,C4H6O3,C4H5O3,-1,False
+C00111_[cyt],C00111,cyt,Glycerone phosphate,16108,C3H7O6P,C3H5O6P,-2,False
+C00112_[cyt],C00112,cyt,CDP,17239,C9H15N3O11P2,C9H13N3O11P2,-2,False
+C00116_[cyt],C00116,cyt,Glycerol,17754,C3H8O3,C3H8O3,0,False
+C00117_[cyt],C00117,cyt,D-Ribose 5-phosphate,17797,C5H11O8P,C5H9O8P,-2,False
+C00118_[cyt],C00118,cyt,D-Glyceraldehyde 3-phosphate,29052,C3H7O6P,C3H5O6P,-2,False
+C00119_[cyt],C00119,cyt,5-Phospho-alpha-D-ribose 1-diphosphate,17111,C5H13O14P3,C5H9O14P3,-4,False
+C00122_[cyt],C00122,cyt,Fumarate,18012,C4H4O4,C4H2O4,-2,False
+C00123_[cyt],C00123,cyt,L-Leucine,15603,C6H13NO2,C6H13NO2,0,False
+C00127_[cyt],C00127,cyt,Glutathione disulfide,17858,C20H32N6O12S2,C20H30N6O12S2,-2,False
+C00129_[cyt],C00129,cyt,Isopentenyl diphosphate,16584,C5H12O7P2,C5H10O7P2,-2,False
+C00130_[cyt],C00130,cyt,IMP,17202,C10H13N4O8P,C10H11N4O8P,-2,False
+C00131_[cyt],C00131,cyt,dATP,16284,C10H16N5O12P3,C10H13N5O12P3,-3,False
+C00133_[cyt],C00133,cyt,D-Alanine,15570,C3H7NO2,C3H7NO2,0,False
+C00134_[cyt],C00134,cyt,Putrescine,17148,C4H12N2,C4H14N2,2,False
+C00134_[ext],C00134,ext,Putrescine,17148,C4H12N2,C4H14N2,2,True
+C00135_[cyt],C00135,cyt,L-Histidine,15971,C6H9N3O2,C6H9N3O2,0,False
+C00135_[ext],C00135,ext,L-Histidine,15971,C6H9N3O2,C6H9N3O2,0,True
+C00137_[cyt],C00137,cyt,myo-Inositol,17268,C6H12O6,C6H12O6,0,False
+C00138_[cyt],C00138,cyt,Reduced ferredoxin,17513,R,-,-,False
+C00139_[cyt],C00139,cyt,Oxidized ferredoxin,17908,R,-,-,False
+C00141_[cyt],C00141,cyt,3-Methyl-2-oxobutanoic acid,16530,C5H8O3,C5H7O3,-1,False
+C00143_[cyt],C00143,cyt,"5,10-Methylenetetrahydrofolate",1989,C20H23N7O6,C20H21N7O6,-2,False
+C00144_[cyt],C00144,cyt,GMP,17345,C10H14N5O8P,C10H12N5O8P,-2,False
+C00147_[cyt],C00147,cyt,Adenine,16708,C5H5N5,C5H5N5,0,False
+C00148_[cyt],C00148,cyt,L-Proline,17203,C5H9NO2,C5H9NO2,0,False
+C00149_[cyt],C00149,cyt,(S)-Malate,30797,C4H6O5,C4H4O5,-2,False
+C00152_[cyt],C00152,cyt,L-Asparagine,17196,C4H8N2O3,C4H8N2O3,0,False
+C00155_[cyt],C00155,cyt,L-Homocysteine,17588,C4H9NO2S,C4H9NO2S,0,False
+C00156_[cyt],C00156,cyt,4-Hydroxybenzoate,30763,C7H6O3,C7H6O3,0,False
+C00158_[cyt],C00158,cyt,Citrate,30769,C6H8O7,C6H5O7,-3,False
+C00160_[cyt],C00160,cyt,Glycolate,17497,C2H4O3,C2H3O3,-1,False
+C00166_[cyt],C00166,cyt,Phenylpyruvate,30851,C9H8O3,C9H7O3,-1,False
+C00168_[cyt],C00168,cyt,Hydroxypyruvate,30841,C3H4O4,C3H3O4,-1,False
+C00169_[cyt],C00169,cyt,Carbamoyl phosphate,17672,CH4NO5P,CH2NO5P,-2,False
+C00170_[cyt],C00170,cyt,5'-Methylthioadenosine,17509,C11H15N5O3S,C11H15N5O3S,0,False
+C00175_[cyt],C00175,cyt,Cobalt ion,27638,Co,Co,0,False
+C00175_[ext],C00175,ext,Cobalt ion,27638,Co,Co,0,True
+C00179_[cyt],C00179,cyt,Agmatine,17431,C5H14N4,C5H16N4,2,False
+C00182_[cyt],C00182,cyt,Glycogen,28087,C6H10O5R,-,-,False
+C00182N_[cyt],C00182N,cyt,Glycogen granule,-,R,-,-,True
+C00183_[cyt],C00183,cyt,L-Valine,16414,C5H11NO2,C5H11NO2,0,False
+C00188_[cyt],C00188,cyt,L-Threonine,16857,C4H9NO3,C4H9NO3,0,False
+C00194_[cyt],C00194,cyt,Cobamide coenzyme,18408,C72H100CoN18O17P,C72CoH101N18O17P,0,False
+C00197_[cax],C00197,cax,3-Phospho-D-glycerate,17794,C3H7O7P,C3H4O7P,-3,False
+C00197_[cyt],C00197,cyt,3-Phospho-D-glycerate,17794,C3H7O7P,C3H4O7P,-3,False
+C00199_[cyt],C00199,cyt,D-Ribulose 5-phosphate,17363,C5H11O8P,C5H9O8P,-2,False
+C00206_[cyt],C00206,cyt,dADP,16174,C10H15N5O9P2,C10H13N5O9P2,-2,False
+C00209_[cyt],C00209,cyt,Oxalate,16995,C2H2O4,C2O4,-2,False
+C00212_[cyt],C00212,cyt,Adenosine,16335,C10H13N5O4,C10H13N5O4,0,False
+C00217_[cyt],C00217,cyt,D-Glutamate,15966,C5H9NO4,C5H8NO4,-1,False
+C00224_[cyt],C00224,cyt,Adenylyl sulfate,17709,C10H14N5O10PS,C10H12N5O10PS,-2,False
+C00227_[cyt],C00227,cyt,Acetyl phosphate,15350,C2H5O5P,C2H3O5P,-2,False
+C00229_[cyt],C00229,cyt,Acyl-carrier protein,18359,HSR,-,-,False
+C00231_[cyt],C00231,cyt,D-Xylulose 5-phosphate,16332,C5H11O8P,C5H9O8P,-2,False
+C00232_[cyt],C00232,cyt,Succinate semialdehyde,16265,C4H6O3,C4H5O3,-1,False
+C00233_[cyt],C00233,cyt,4-Methyl-2-oxopentanoate,48430,C6H10O3,C6H9O3,-1,False
+C00234_[cyt],C00234,cyt,10-Formyltetrahydrofolate,15637,C20H23N7O7,C20H21N7O7,-2,False
+C00235_[cyt],C00235,cyt,Dimethylallyl diphosphate,16057,C5H12O7P2,C5H10O7P2,-2,False
+C00236_[cyt],C00236,cyt,3-Phospho-D-glyceroyl phosphate,16001,C3H8O10P2,C3H4O10P2,-4,False
+C00237_[cyt],C00237,cyt,CO,17245,CO,CO,0,False
+C00237_[ext],C00237,ext,CO,17245,CO,CO,0,True
+C00238_[cyt],C00238,cyt,Potassium,29103,K,K,1,False
+C00238_[ext],C00238,ext,Potassium,29103,K,K,1,True
+C00244_[cyt],C00244,cyt,Nitrate,48107,NO3-,NO3,-1,False
+C00244_[ext],C00244,ext,Nitrate,48107,NO3-,NO3,-1,True
+C00251_[cyt],C00251,cyt,Chorismate,17333,C10H10O6,C10H8O6,-2,False
+C00253_[cyt],C00253,cyt,Nicotinate,15940,C6H5NO2,C6H4NO2,-1,False
+C00254_[cyt],C00254,cyt,Prephenate,16666,C10H10O6,C10H8O6,-2,False
+C00255_[cyt],C00255,cyt,Riboflavin,17015,C17H20N4O6,C17H19N4O6,-1,False
+C00256_[cyt],C00256,cyt,(R)-Lactate,42111,C3H6O3,C3H5O3,-1,False
+C00258_[cyt],C00258,cyt,D-Glycerate,32398,C3H6O4,C3H5O4,-1,False
+C00263_[cyt],C00263,cyt,L-Homoserine,15699,C4H9NO3,C4H9NO3,0,False
+C00266_[cyt],C00266,cyt,Glycolaldehyde,17071,C2H4O2,C2H4O2,0,False
+C00269_PG_[cyt],C00269_PG,cyt,CDP-diacylglycerol,17962,C14H19N3O15P2R2,C14H17N3O15P2R2,-2,False
+C00275_[cyt],C00275,cyt,D-Mannose 6-phosphate,17369,C6H13O9P,C6H11O9P,-2,False
+C00279_[cyt],C00279,cyt,D-Erythrose 4-phosphate,48153,C4H9O7P,C4H7O7P,-2,False
+C00283_[cyt],C00283,cyt,Hydrogen sulfide,16136,H2S,HS,-1,False
+C00286_[cyt],C00286,cyt,dGTP,16497,C10H16N5O13P3,C10H13N5O13P3,-3,False
+C00288_[cax],C00288,cax,HCO3-,17544,HCO3,CHO3,-1,False
+C00288_[cyt],C00288,cyt,HCO3-,17544,HCO3,CHO3,-1,False
+C00288_[ext],C00288,ext,HCO3-,17544,HCO3,CHO3,-1,True
+C00291_[cyt],C00291,cyt,Nickel,28112,Ni,Ni,0,False
+C00291_[ext],C00291,ext,Nickel,28112,Ni,Ni,0,True
+C00295_[cyt],C00295,cyt,Orotate,16742,C5H4N2O4,C5H3N2O4,-1,False
+C00305_[cyt],C00305,cyt,Magnesium,18420,Mg,Mg,2,False
+C00305_[ext],C00305,ext,Magnesium,18420,Mg,Mg,2,True
+C00311_[cyt],C00311,cyt,Isocitrate,30887,C6H8O7,C6H5O7,-3,False
+C00315_[cyt],C00315,cyt,Spermidine,16610,C7H19N3,C7H22N3,3,False
+C00315_[ext],C00315,ext,Spermidine,16610,C7H19N3,C7H22N3,3,True
+C00327_[cyt],C00327,cyt,L-Citrulline,16349,C6H13N3O3,C6H13N3O3,0,False
+C00332_[cyt],C00332,cyt,Acetoacetyl-CoA,15345,C25H40N7O18P3S,C25H36N7O18P3S,-4,False
+C00334_[cyt],C00334,cyt,4-Aminobutanoate,16865,C4H9NO2,C4H9NO2,0,False
+C00337_[cyt],C00337,cyt,(S)-Dihydroorotate,17025,C5H6N2O4,C5H5N2O4,-1,False
+C00341_[cyt],C00341,cyt,Geranyl diphosphate,17211,C10H20O7P2,C10H18O7P2,-2,False
+C00342_[cyt],C00342,cyt,Thioredoxin,15967,C10H14N4O4S2R4,-,-,False
+C00343_[cyt],C00343,cyt,Thioredoxin disulfide,18191,C10H12N4O4S2R4,-,-,False
+C00344_PG_[cyt],C00344_PG,cyt,Phosphatidylglycerol,17517,C8H13O10PR2,C8H12910PR2,-1,False
+C00345_[cyt],C00345,cyt,6-Phospho-D-gluconate,48928,C6H13O10P,C6H10O10P,-3,False
+C00352_[cyt],C00352,cyt,D-Glucosamine 6-phosphate,15873,C6H14NO8P,C6H13NO8P,-1,False
+C00353_[cyt],C00353,cyt,Geranylgeranyl diphosphate,48861,C20H36O7P2,C20H34O7P2,-2,False
+C00354_[cyt],C00354,cyt,"D-Fructose 1,6-bisphosphate",16905,C6H14O12P2,C6H10O12P2,-4,False
+C00360_[cyt],C00360,cyt,dAMP,17713,C10H14N5O6P,C10H12N5O6P,-2,False
+C00361_[cyt],C00361,cyt,dGDP,28862,C10H15N5O10P2,C10H13N5O10P2,-2,False
+C00363_[cyt],C00363,cyt,dTDP,18075,C10H16N2O11P2,C10H14N2O11P2,-2,False
+C00364_[cyt],C00364,cyt,dTMP,17013,C10H15N2O8P,C10H13N2O8P,-2,False
+C00365_[cyt],C00365,cyt,dUMP,17622,C9H13N2O8P,C9H11N2O8P,-2,False
+C00407_[cyt],C00407,cyt,L-Isoleucine,17191,C6H13NO2,C6H13NO2,0,False
+C00415_[cyt],C00415,cyt,Dihydrofolate,15633,C19H21N7O6,C19H19N7O6,-2,False
+C00416_DGDG_[cyt],C00416,cyt,Phosphatidate_DGDG,16337,C5H7O8PR2,C5H5O8PR2,-2,False
+C00416_MGDG_[cyt],C00416,cyt,Phosphatidate_MGDG,16337,C5H7O8PR2,C5H5O8PR2,-2,False
+C00416_PG_[cyt],C00416,cyt,Phosphatidate_PG,16337,C5H7O8PR2,C5H5O8PR2,-2,False
+C00416_SQDG_[cyt],C00416,cyt,Phosphatidate_SQDG,16337,C5H7O8PR2,C5H5O8PR2,-2,False
+C00417_[cyt],C00417,cyt,cis-Aconitate,32805,C6H6O6,C6H3O6,-3,False
+C00430_[cyt],C00430,cyt,5-Aminolevulinate,17549,C5H9NO3,C5H9NO3,0,False
+C00437_[cyt],C00437,cyt,N-Acetylornithine,16543,C7H14N2O3,C7H14N2O3,0,False
+C00438_[cyt],C00438,cyt,N-Carbamoyl-L-aspartate,15859,C5H8N2O5,C5H6N2O5,-2,False
+C00440_[cyt],C00440,cyt,5-Methyltetrahydrofolate,15641,C20H25N7O6,C20H23N7O6,-2,False
+C00441_[cyt],C00441,cyt,L-Aspartate 4-semialdehyde,18051,C4H7NO3,C4H7NO3,0,False
+C00445_[cyt],C00445,cyt,"5,10-Methenyltetrahydrofolate",15638,C20H22N7O6,C20H20N7O6,-1,False
+C00447_[cyt],C00447,cyt,"Sedoheptulose 1,7-bisphosphate",17969,C7H16O13P2,C7H12O13P2,-4,False
+C00448_[cyt],C00448,cyt,"trans,trans-Farnesyl diphosphate",17407,C15H28O7P2,C15H26O7P2,-2,False
+C00458_[cyt],C00458,cyt,dCTP,16311,C9H16N3O13P3,C9H13N3O13P3,-3,False
+C00459_[cyt],C00459,cyt,dTTP,18077,C10H17N2O14P3,C10H14N2O14P3,-3,False
+C00460_[cyt],C00460,cyt,dUTP,17625,C9H15N2O14P3,C9H12N2O14P3,-3,False
+C00463_[cyt],C00463,cyt,Indole,16881,C8H7N,C8H7N,0,False
+C00469_[cyt],C00469,cyt,Ethanol,16236,C2H6O,C2H6O,0,False
+C00493_[cyt],C00493,cyt,Shikimate,16119,C7H10O5,C7H9O5,-1,False
+C00498_[cyt],C00498,cyt,ADP-glucose,15751,C16H25N5O15P2,C16H23N5O15P2,-2,False
+C00501_[cyt],C00501,cyt,CDP-glucose,35242,C15H25N3O16P2 ,-2,-,False
+C00522_[cyt],C00522,cyt,(R)-Pantoate,14737,C6H12O4,C6H11O4,-1,False
+C00536_[cyt],C00536,cyt,Triphosphate,39949,P3H5O10,H2O10P3,-3,False
+C00544_[cyt],C00544,cyt,Homogentisate,44747,C8H8O4,C8H7O4,-1,False
+C00546_[cyt],C00546,cyt,Methylglyoxal,17158,C3H4O2,C3H4O2,0,False
+C00559_[cyt],C00559,cyt,Deoxyadenosine,17256,C10H13N5O3,C10H13N5O3,0,False
+C00568_[cyt],C00568,cyt,4-Aminobenzoate,30753,C7H7NO2,C7H6NO2,-1,False
+C00577_[cyt],C00577,cyt,D-Glyceraldehyde,17378,C3H6O3,C3H6O3,0,False
+C00624_[cyt],C00624,cyt,N-Acetyl-L-glutamate,17533,C7H11NO5,C7H9NO5,-2,False
+C00627_[cyt],C00627,cyt,Pyridoxine phosphate,28803,C8H12NO6P,C8H10NO6P,-2,False
+C00631_[cyt],C00631,cyt,2-Phospho-D-glycerate,17835,C3H7O7P,C3H4O7P,-3,False
+C00636_[cyt],C00636,cyt,D-Mannose 1-phosphate,35374,C6H13O9P,C6H11O9P,-2,False
+C00641_DGDG_[cyt],C00641,cyt,"1,2-Diacyl-sn-glycerol_DGDG",17815,C5H6O5R2,C5H6O5R2,0,False
+C00641_MGDG_[cyt],C00641,cyt,"1,2-Diacyl-sn-glycerol_MGDG",17815,C5H6O5R2,C5H6O5R2,0,False
+C00641_SQDG_[cyt],C00641,cyt,"1,2-Diacyl-sn-glycerol_SQDG",17815,C5H6O5R2,C5H6O5R2,0,False
+C00655_[cyt],C00655,cyt,Xanthosine 5'-phosphate,15652,C10H13N4O9P,C10H11N4O9P,-2,False
+C00666_[cyt],C00666,cyt,"LL-2,6-Diaminoheptanedioate",16026,C7H14N2O4,C7H14N2O4,0,False
+C00669_[cyt],C00669,cyt,gamma-L-Glutamyl-L-cysteine,17515,C8H14N2O5S,C8H13N2O5S,-1,False
+C00671_[cyt],C00671,cyt,(S)-3-Methyl-2-oxopentanoic acid,15614,C6H10O3,C6H9O3,-1,False
+C00680_[cyt],C00680,cyt,"meso-2,6-Diaminoheptanedioate",16488,C7H14N2O4,C7H14N2O4,0,False
+C00688_[cyt],C00688,cyt,dTDP-4-dehydro-6-deoxy-L-mannose,15744,C16H24N2O15P2,C16H22N2O15P2,-2,False
+C00692_[cyt],C00692,cyt,UDP-N-acetylmuramoyl-L-alanyl-D-glutamate,16970,C28H43N5O23P2,C28H39N5O23P2,-4,False
+C00704_[cyt],C00704,cyt,O2-,18421,O2,O2,-1,False
+C00705_[cyt],C00705,cyt,dCDP,28846,C9H15N3O10P2,C9H13N3O10P2,-2,False
+C00718_[cyt],C00718,cyt,Amylose,28102,C6H10O5,C6H10O5,0,False
+C00750_[cyt],C00750,cyt,Spermine,15746,C10H26N4,C10H30N4,4,False
+C00842_[cyt],C00842,cyt,dTDP-glucose,15700,C16H26N2O16P2,C16H24N2O16P2,-2,False
+C00856_[cyt],C00856,cyt,DNA cytosine,16991,C9H14N3O7PR,-,-,True
+C00857_[cyt],C00857,cyt,Deamino-NAD+,18304,C21H27N6O15P2,C21H24N6O15P2,-2,False
+C00860_[cyt],C00860,cyt,L-Histidinol,16255,C6H11N3O,C6H12N3O,1,False
+C00864_[cyt],C00864,cyt,Pantothenate,46905,C9H17NO5,C9H16NO5,-1,False
+C00882_[cyt],C00882,cyt,Dephospho-CoA,15468,C21H35N7O13P2S,C21H33N7O13P2S,-2,False
+C00885_[cyt],C00885,cyt,Isochorismate,17582,C10H10O6,C10H8O6,-2,False
+C00900_[cyt],C00900,cyt,2-Acetolactate,16444,C5H8O4,C5H7O4,-1,False
+C00921_[cyt],C00921,cyt,Dihydropteroate,4581,C14H14N6O3,C14H13N6O3,-1,False
+C00931_[cyt],C00931,cyt,Porphobilinogen,17381,C10H14N2O4,C10H13N2O4,-1,False
+C00944_[cyt],C00944,cyt,3-Dehydroquinate,17947,C7H10O6,C7H9O6,-1,False
+C00966_[cyt],C00966,cyt,2-Dehydropantoate,17094,C6H10O4,C6H9O4,-1,False
+C00979_[cyt],C00979,cyt,O-Acetyl-L-serine,17981,C5H9NO4,C5H9NO4,0,False
+C00988_[cax],C00988,cax,2-Phosphoglycolate,17150,C2H5O6P,C2H2O6P,-3,False
+C00988_[cyt],C00988,cyt,2-Phosphoglycolate,17150,C2H5O6P,C2H2O6P,-3,False
+C00993_[cyt],C00993,cyt,D-Alanyl-D-alanine,16576,C6H12N2O3,C6H12N2O3,0,False
+C00995_[cyt],C00995,cyt,Ferricytochrome b1,16748,R,-,-,True
+C00998_[cyt],C00998,cyt,Ferrocytochrome b1,16762,R,-,-,True
+C01005_[cyt],C01005,cyt,O-Phospho-L-serine,15811,C3H8NO6P,C3H8NO6P,-,False
+C01024_[cyt],C01024,cyt,Hydroxymethylbilane,16645,C40H46N4O17,C40H38N4O17,-8,False
+C01035_[cyt],C01035,cyt,4-Guanidinobutanoate,15728,C5H11N3O2,C5H11N3O2,0,False
+C01050_[cyt],C01050,cyt,UDP-N-acetylmuramate,17882,C20H31N3O19P2,C20H28N3O19P2,-3,False
+C01051_[cyt],C01051,cyt,Uroporphyrinogen III,15437,C40H44N4O16,C40H36N4O16,-8,False
+C01077_[cyt],C01077,cyt,O-Acetyl-L-homoserine,16288,C6H11NO4,C6H11NO4,0,False
+C01079_[cyt],C01079,cyt,Protoporphyrinogen IX,15435,C34H40N4O4,C34H38N4O4,-2,False
+C01081_[cyt],C01081,cyt,Thiamin monophosphate,9533,C12H18N4O4PS,C12H16N4O4PS,-1,False
+C01100_[cyt],C01100,cyt,L-Histidinol phosphate,16996,C6H12N3O4P,C6H11N3O4P,-1,False
+C01102_[cyt],C01102,cyt,O-Phospho-L-homoserine,15961,C4H10NO6P,C4H8NO6P,-2,False
+C01103_[cyt],C01103,cyt,Orotidine 5'-phosphate,15842,C10H13N2O11P,C10H10N2O11P,-3,False
+C01134_[cyt],C01134,cyt,Pantetheine 4'-phosphate,16858,C11H23N2O7PS,C11H21N2O7PS,-2,False
+C01137_[cyt],C01137,cyt,S-Adenosylmethioninamine,15625,C14H23N6O3S,C14H24N6O3S,2,False
+C01146_[cyt],C01146,cyt,2-Hydroxy-3-oxopropanoate,16992,C3H4O4,C3H3O4,-1,False
+C01157_[cyt],C01157,cyt,trans-4-Hydroxy-L-proline,18095,C5H9NO3,C5H9NO3,0,False
+C01165_[cyt],C01165,cyt,L-Glutamate 5-semialdehyde,17232,C5H9NO3,C5H9NO3,0,False
+C01179_[cyt],C01179,cyt,3-(4-Hydroxyphenyl)pyruvate,15999,C9H8O4,C9H7O4,-1,False
+C01182_[cax],C01182,cax,"D-Ribulose 1,5-bisphosphate",16710,C5H12O11P2,C5H8O11P2,-4,False
+C01182_[cyt],C01182,cyt,"D-Ribulose 1,5-bisphosphate",16710,C5H12O11P2,C5H8O11P2,-4,False
+C01185_[cyt],C01185,cyt,Nicotinate D-ribonucleotide,15763,C11H15NO9P,C11H12NO9P,-2,False
+C01203_[cyt],C01203,cyt,Oleoyl-[acyl-carrier protein],-,C18H33OSR,-,-,False
+C01209_[cyt],C01209,cyt,Malonyl-[acyl-carrier protein],17330,C3H3O3SR,C3H2O3RS,-1,False
+C01212_[cyt],C01212,cyt,UDP-N-acetylmuramoyl-L-alanine,16932,C23H36N4O20P2,C23H33N4O20P2,-3,False
+C01236_[cyt],C01236,cyt,"D-Glucono-1,5-lactone 6-phosphate",16938,C6H11O9P,C6H9O9P,-2,False
+C01250_[cyt],C01250,cyt,N-Acetyl-L-glutamate 5-semialdehyde,16319,C7H11NO4,C7H10NO4,-1,False
+C01267_[cyt],C01267,cyt,3-(Imidazol-4-yl)-2-oxopropyl phosphate,16426,C6H9N2O5P,C6H7N2O5P,-2,False
+C01268_[cyt],C01268,cyt,5-Amino-6-(5'-phosphoribosylamino)uracil,18337,C9H15N4O9P,C9H13N4O9P,-2,False
+C01269_[cyt],C01269,cyt,5-O-(1-Carboxyvinyl)-3-phosphoshikimate,16257,C10H13O10P,C10H9O10P,-4,False
+C01300_[cyt],C01300,cyt,"2-Amino-4-hydroxy-6-hydroxymethyl-7,8-dihydropteridine",17083,C7H9N5O2,C7H9N5O2,0,False
+C01302_[cyt],C01302,cyt,1-(2-Carboxyphenylamino)-1-deoxy-D-ribulose 5-phosphate,29112,C12H16NO9P,C12H13NO9P,-3,False
+C01304_[cyt],C01304,cyt,"2,5-Diamino-6-(5'-phosphoribosylamino)-4-pyrimidineone",29114,C9H16N5O8P,C9H14N5O8P,-2,False
+C01330_[cyt],C01330,cyt,Sodium,29101,Na,Na,1,False
+C01330_[ext],C01330,ext,Sodium,29101,Na,Na,1,True
+C01342_[cyt],C01342,cyt,NH4+,28938,NH4,H4N,1,False
+C01342_[ext],C01342,ext,NH4+,28938,NH4,H4N,1,True
+C01346_[cyt],C01346,cyt,dUDP,28850,C9H14N2O11P2,C9H12N2O11P2,-2,False
+C01353_[cax],C01353,cax,Carbonic acid,28976,H2CO3,CHO3,-1,False
+C01419_[cyt],C01419,cyt,Cys-Gly,4047,C5H10N2O3S,C5H10N2O3S,0,False
+C01468_[cyt],C01468,cyt,4-Cresol,17847,C7H8O,C7H8O,0,False
+C01468_[ext],C01468,ext,4-Cresol,17847,C7H8O,C7H8O,0,True
+C01641_[cyt],C01641,cyt,tRNA(Glu),29175,C15H21N5O10PR,-,-,False
+C01672_[cyt],C01672,cyt,Cadaverine,18127,C5H14N2,C5H16N2,2,False
+C01847_[cyt],C01847,cyt,Reduced FMN,16048,C17H23N4O9P,C17H21N4O9P,-2,False
+C01929_[cyt],C01929,cyt,L-Histidinal,-,C6H9N3O,-,-,False
+C02059_[cyt],C02059,cyt,Phylloquinone,18067,C31H46O2,C31H46O2,0,False
+C02094_[cyt],C02094,cyt,beta-Carotene,17579,C40H56,C40H56,0,False
+C02097_[cyt],C02097,cyt,dTDP-galactose,14086,C16H26N2O16P2,C16H24N2O16P2,-2,False
+C02139_[cyt],C02139,cyt,Chlorophyllide,16900,C35H34MgN4O5,C35H32MgN4O5,-2,False
+C02191_[cyt],C02191,cyt,Protoporphyrin,15430,C34H34N4O4,C34H32N4O4,-2,False
+C02226_[cyt],C02226,cyt,2-Methylmaleate,17626,C5H6O4,C5H4O4,-2,False
+C02463_[cyt],C02463,cyt,Precorrin 2,50602,C42H48N4O16,C42H41N4O16,-7,False
+C02477_[cyt],C02477,cyt,alpha-Tocopherol,18145,C29H50O2,C29H50O2,0,False
+C02483_[cyt],C02483,cyt,gamma-Tocopherol,18185,C28H48O2,C28H48O2,0,False
+C02504_[cyt],C02504,cyt,(2S)-2-Isopropylmalate,35128,C7H12O5,C7H10O5,-2,False
+C02591_[cyt],C02591,cyt,Sucrose 6-phosphate,16308,C12H23O14P,C12H21O14P,-2,False
+C02612_[cyt],C02612,cyt,(R)-2-Methylmalate,15586,C5H8O5,C5H6O5,-2,False
+C02631_[cyt],C02631,cyt,2-Isopropylmaleate,17275,C7H10O4,C7H8O4,-2,False
+C02637_[cyt],C02637,cyt,3-Dehydroshikimate,30918,C7H8O5,C7H7O5,-1,False
+C02730_[cyt],C02730,cyt,2-Succinylbenzoate,18325,C11H10O5,C11H8O5,-2,False
+C02739_[cyt],C02739,cyt,1-(5-Phospho-D-ribosyl)-ATP,18263,C15H25N5O20P4,C15H20N5O20P4,-5,False
+C02741_[cyt],C02741,cyt,Phosphoribosyl-AMP,18374,C15H23N5O14P2,C15H19N5O14P2,-4,False
+C02880_[cyt],C02880,cyt,Protochlorophyllide,16673,C35H32MgN4O5,C35H30MgN4O5,-2,False
+C02967_[cyt],C02967,cyt,DNA 5-methylcytosine,-,C10H16N3O7PR,-,-,True
+C02987_[cyt],C02987,cyt,L-Glutamyl-tRNA(Glu),29157,C20H28N6O13PR,-,-,False
+C03025_[pps],C03025,pps,Reduced plastocyanin,-,R,-,-,False
+C03025_[tll],C03025,tll,Reduced plastocyanin,-,R,-,-,False
+C03082_[cyt],C03082,cyt,4-Phospho-L-aspartate,15836,C4H8NO7P,C4H6NO7P,-2,False
+C03090_[cyt],C03090,cyt,5-Phosphoribosylamine,37737,C5H12NO7P,C5H11NO7P,-1,False
+C03114_[cyt],C03114,cyt,Dimethylbenzimidazole,15890,C9H10N2,C9H10N2,0,False
+C03160_[cyt],C03160,cyt,2-Succinylbenzoyl-CoA,15509,C32H44N7O20P3S,C32H39N7O20P3S,-5,False
+C03162_[pps],C03162,pps,Oxidized plastocyanin,-,R,-,-,False
+C03162_[tll],C03162,tll,Oxidized plastocyanin,-,R,-,-,False
+C03175_[cyt],C03175,cyt,Shikimate 3-phosphate,17052,C7H11O8P,C7H8O8P,-3,False
+C03232_[cyt],C03232,cyt,3-Phosphonooxypyruvate,30933,C3H5O7P,C3H5O7P,0,False
+C03263_[cyt],C03263,cyt,Coproporphyrinogen III,15439,C36H44N4O8,C36H40N4O8,-4,False
+C03287_[cyt],C03287,cyt,L-Glutamyl 5-phosphate,17798,C5H10NO7P,C5H8NO7P,-2,False
+C03319_[cyt],C03319,cyt,dTDP-6-deoxy-L-mannose,15774,C16H26N2O15P2,C16H24N2O15P2,-2,False
+C03340_[cyt],C03340,cyt,"L-2,3-Dihydrodipicolinate",18042,C7H7NO4,C7H5NO4,-2,False
+C03373_[cyt],C03373,cyt,Aminoimidazole ribotide,28843,C8H14N3O7P,C8H13N3O7P,-1,False
+C03393_[cyt],C03393,cyt,4-Phospho-D-erythronate,49003,C4H9O8P,C4H6O8P,-3,False
+C03406_[cyt],C03406,cyt,N-(L-Arginino)succinate,15682,C10H18N4O6,C10H17N4O6,-1,False
+C03427_[cyt],C03427,cyt,Prephytoene diphosphate,17090,C40H68O7P2,C40H66O7P2,-2,False
+C03451_[cyt],C03451,cyt,(R)-S-Lactoylglutathione,15694,C13H21N3O8S,C13H20N3O8S,-1,False
+C03492_[cyt],C03492,cyt,D-4'-Phosphopantothenate,15905,C9H18NO8P,C9H15NO8P,-3,False
+C03506_[cyt],C03506,cyt,Indoleglycerol phosphate,18299,C11H14NO6P,C11H12NO6P,-2,False
+C03516_[cyt],C03516,cyt,Magnesium protoporphyrin,15431,C34H32MgN4O4,C34H30MgN4O4,-2,False
+C03561_[cyt],C03561,cyt,(R)-3-Hydroxybutanoyl-CoA,15452,C25H42N7O18P3S,C25H38N7O18P3S,-4,False
+C03657_[cyt],C03657,cyt,"1,4-Dihydroxy-2-naphthoate",18094,C11H8O4,C11H7O4,-1,False
+C03692_DGDG_[cyt],C03692,cyt,"1,2-Diacyl-3-beta-D-galactosyl-sn-glycerol_DGDG",17615,C11H16O10R2,C11H16O10R2,-,False
+C03692_MGDG_[cyt],C03692,cyt,"1,2-Diacyl-3-beta-D-galactosyl-sn-glycerol_MGDG",17615,C11H16O10R2,C11H16O10R2,-,False
+C03722_[cyt],C03722,cyt,"Pyridine-2,3-dicarboxylate",16675,C7H5NO4,C7H3NO4,-2,False
+C03741_[cyt],C03741,cyt,(S)-4-Amino-5-oxopentanoate,15757,C5H9NO3,C5H9NO3,0,False
+C03771_[cyt],C03771,cyt,5-Guanidino-2-oxopentanoate,28116,C6H11N3O3,C6H11N3O3,0,False
+C03794_[cyt],C03794,cyt,"N6-(1,2-Dicarboxyethyl)-AMP",15919,C14H18N5O11P,C14H14N5O11P,-4,False
+C03838_[cyt],C03838,cyt,5'-Phosphoribosylglycinamide,18349,C7H15N2O8P,C7H14N2O8P,-1,False
+C03885_[cyt],C03885,cyt,3-Nonaprenyl-4-hydroxybenzoate,18162,C52H78O3,C52H76O3,-2,False
+C03892_PG_[cyt],C03892,cyt,Phosphatidylglycerophosphate,37393,C8H14O13P2R2,C8H11O13P2R2,-3,False
+C03912_[cyt],C03912,cyt,(S)-1-Pyrroline-5-carboxylate,371,C5H7NO2,C5H6NO2,-1,False
+C03939_[cyt],C03939,cyt,Acetyl-[acyl-carrier protein],17093,C2H3OSR,C2H3ORS,0,False
+C03972_[cyt],C03972,cyt,"2,3,4,5-Tetrahydrodipicolinate",864,C7H9NO4,C7H7NO4,-2,False
+C04006_[cyt],C04006,cyt,1D-myo-Inositol 3-phosphate,18169,C6H13O9P,-,-,False
+C04039_[cyt],C04039,cyt,"2,3-Dihydroxy-3-methylbutanoate",15689,C5H10O4,C5H9O4,-1,False
+C04046_DGDG_[cyt],C04046,cyt,"3-D-Glucosyl-1,2-diacylglycerol_DGDG",-,C11H16O10R2,-,-,False
+C04046_MGDG_[cyt],C04046,cyt,"3-D-Glucosyl-1,2-diacylglycerol_MGDG",-,C11H16O10R2,-,-,False
+C04088_[cyt],C04088,cyt,Octadecanoyl-[acyl-carrier protein],-,C18H35OSR,-,-,False
+C04122_[cyt],C04122,cyt,D-1-Aminopropan-2-ol O-phosphate,28390,C3H10NO4P,C3H9NO4P,-1,False
+C04133_[cyt],C04133,cyt,N-Acetyl-L-glutamate 5-phosphate,16878,C7H12NO8P,C7H9NO8P,-3,False
+C04145_[cyt],C04145,cyt,all-trans-Nonaprenyl diphosphate,18144,C45H76O7P2,C45H74O7P2,-2,False
+C04188_[cyt],C04188,cyt,S-Methyl-5-thio-D-ribose 1-phosphate,27859,C6H13O7PS,C6H11O7PS,-2,False
+C04236_[cyt],C04236,cyt,(2S)-2-Isopropyl-3-oxosuccinate,1467,C7H10O5,C7H8O5,-2,False
+C04246_[cyt],C04246,cyt,But-2-enoyl-[acyl-carrier protein],-,C4H5OSR,-,-,False
+C04281_[cyt],C04281,cyt,L-1-Pyrroline-3-hydroxy-5-carboxylate,6151,C5H7NO3,C5H6NO3,-1,False
+C04302_[cyt],C04302,cyt,N-(5-Phospho-D-ribosyl)anthranilate,7091,C12H16NO9P,C12H13NO9P,-3,False
+C04327_[cyt],C04327,cyt,4-Methyl-5-(2-phosphoethyl)-thiazole,17857,C6H10NO4PS,C6H8NO4PS,-2,False
+C04332_[cyt],C04332,cyt,"6,7-Dimethyl-8-(1-D-ribityl)lumazine",17601,C13H18N4O6,C13H17N4O6,-1,False
+C04352_[cyt],C04352,cyt,(R)-4'-Phosphopantothenoyl-L-cysteine,15769,C12H23N2O9PS,C12H20N2O9PS,-3,False
+C04376_[cyt],C04376,cyt,5'-Phosphoribosyl-N-formylglycinamide,18272,C8H15N2O9P,C8H13N2O9P,-2,False
+C04411_[cyt],C04411,cyt,"(2R,3S)-3-Isopropylmalate",35121,C7H12O5,C7H10O5,-2,False
+C04454_[cyt],C04454,cyt,5-Amino-6-(5'-phosphoribitylamino)uracil,18247,C9H17N4O9P,C9H15N4O9P,-2,False
+C04501_[cyt],C04501,cyt,N-Acetyl-alpha-D-glucosamine 1-phosphate,16446,C8H16NO9P,C8H14NO9P,-2,False
+C04536_[cyt],C04536,cyt,Magnesium protoporphyrin monomethyl ester,15432,C35H34MgN4O4,C35H34MgN4O4,0,False
+C04556_[cyt],C04556,cyt,4-Amino-2-methyl-5-phosphomethylpyrimidine,18032,C6H10N3O4P,C6H8N3O4P,-2,False
+C04574_[cyt],C04574,cyt,"di-trans,poly-cis-Undecaprenyl diphosphate",18197,C55H92O7P2,C55H90O7P2,-2,False
+C04582_[cyt],C04582,cyt,S-Methyl-5-thio-D-ribulose 1-phosphate,28096,C6H13O7PS,C6H11O7PS,-2,False
+C04582_[ext],C04582,ext,S-Methyl-5-thio-D-ribulose 1-phosphate,28096,C6H13O7PS,C6H11O7PS,-2,True
+C04618_[cyt],C04618,cyt,(3R)-3-Hydroxybutanoyl-[acyl-carrier protein],-,C4H7O2SR,-,-,False
+C04619_[cyt],C04619,cyt,(3R)-3-Hydroxydecanoyl-[acyl-carrier protein],-,C10H19O2SR,-,-,False
+C04620_[cyt],C04620,cyt,(3R)-3-Hydroxyoctanoyl-[acyl-carrier protein],-,C8H15O2SR,-,-,False
+C04631_[cyt],C04631,cyt,UDP-N-acetyl-3-(1-carboxyvinyl)-D-glucosamine,16435,C20H29N3O19P2,C20H26N3O19P2,-3,False
+C04633_[cyt],C04633,cyt,(3R)-3-Hydroxypalmitoyl-[acyl-carrier protein],-,C16H31O2SR,-,-,False
+C04640_[cyt],C04640,cyt,2-(Formamido)-N1-(5'-phosphoribosyl)acetamidine,18413,C8H16N3O8P,C8H15N3O8P,-1,False
+C04652_[cyt],C04652,cyt,"UDP-2,3-bis(3-hydroxytetradecanoyl)glucosamine",17787,C43H77N3O20P2,C43H75N3O20P2,-2,False
+C04666_[cyt],C04666,cyt,D-erythro-1-(Imidazol-4-yl)glycerol 3-phosphate,17805,C6H11N2O6P,C6H9N2O6P,-2,False
+C04677_[cyt],C04677,cyt,1-(5'-Phosphoribosyl)-5-amino-4-imidazolecarboxamide,18406,C9H15N4O8P,C9H13N4O8P,-2,False
+C04688_[cyt],C04688,cyt,(3R)-3-Hydroxytetradecanoyl-[acyl-carrier protein],-,C14H27O2SR,-,-,False
+C04691_[cyt],C04691,cyt,2-Dehydro-3-deoxy-D-arabino-heptonate 7-phosphate,18150,C7H13O10P,C7H10O10P,-3,False
+C04732_[cyt],C04732,cyt,5-Amino-6-(1-D-ribitylamino)uracil,15934,C9H16N4O6,C9H16N4O6,0,False
+C04734_[cyt],C04734,cyt,1-(5'-Phosphoribosyl)-5-formamido-4-imidazolecarboxamide,18381,C10H15N4O9P,C10H13N4O9P,-2,False
+C04738_[cyt],C04738,cyt,UDP-3-O-(3-hydroxytetradecanoyl)-N-acetylglucosamine,28131,C31H53N3O19P2,C31H51N3O19P2,-2,False
+C04751_[cyt],C04751,cyt,1-(5-Phospho-D-ribosyl)-5-amino-4-imidazolecarboxylate,28413,C9H14N3O9P,C9H12N3O9P,-2,False
+C04752_[cyt],C04752,cyt,2-Methyl-4-amino-5-hydroxymethylpyrimidine diphosphate,16629,C6H11N3O7P2,C6H9N3O7P2,-2,False
+C04778_[cyt],C04778,cyt,"N1-(5-Phospho-alpha-D-ribosyl)-5,6-dimethylbenzimidazole",16837,C14H19N2O7P,C14H17N2O7P,-2,False
+C04807_[cyt],C04807,cyt,"2-Amino-7,8-dihydro-4-hydroxy-6-(diphosphooxymethyl)pteridine",15998,C7H11N5O8P2,C7H9N5O8P2,-2,False
+C04823_[cyt],C04823,cyt,1-(5'-Phosphoribosyl)-5-amino-4-(N-succinocarboxamide)-imidazole,18319,C13H19N4O12P,C13H15N4O12P,-4,False
+C04824_[cyt],C04824,cyt,"2,3-Bis(3-hydroxytetradecanoyl)-beta-D-glucosaminyl 1-phosphate",16942,C34H66NO12P,C34H64NO12P,-2,False
+C04874_[cyt],C04874,cyt,"2-Amino-4-hydroxy-6-(D-erythro-1,2,3-trihydroxypropyl)-7,8-",17001,C9H13N5O4,C9H13N5O4,0,False
+C04877_[cyt],C04877,cyt,"UDP-N-acetylmuramoyl-L-alanyl-D-gamma-glutamyl-meso-2,6-diaminopimelate",28639,C35H55N7O26P2,C35H51N7O26P2,-4,False
+C04882_[cyt],C04882,cyt,UDP-N-acetylmuramoyl-L-alanyl-D-glutamyl-6-carboxy-L-lysyl-D-alanyl-D-alanine,18199,C41H65N9O28P2,C41H61N9O28P2,-4,False
+C04895_[cyt],C04895,cyt,"2-Amino-4-hydroxy-6-(erythro-1,2,3-trihydroxypropyl)dihydropteridinetriphosphate",18372,C9H16N5O13P3,C9H13N5O13P3,-3,False
+C04896_[cyt],C04896,cyt,5-(5-Phospho-D-ribosylaminoformimino)-1-(5-phosphoribosyl)-imidazole-4-carboxamide,18302,C15H25N5O15P2,C15H21N5O15P2,-4,False
+C04916_[cyt],C04916,cyt,N-(5'-Phospho-D-1'-ribulosylformimino)-5-amino-1-(5''-phospho-D-ribosyl)-4-imidazolecarboxamide,27735,C15H25N5O15P2,C15H21N5O15P2,-4,False
+C04932_[cyt],C04932,cyt,"2,3,2',3'-Tetrakis(3-hydroxytetradecanoyl)-D-glucosaminyl-1,6-beta-",18380,C68H129N2O20P,C68H127N2O20P,-2,False
+C05125_[cyt],C05125,cyt,2-(alpha-Hydroxyethyl)thiamine diphosphate,978,C14H23N4O8P2S,C14H21N4O8P2S,-1,False
+C05198_[cyt],C05198,cyt,5'-Deoxyadenosine,17319,C10H13N5O3,C10H13N5O3,0,False
+C05223_[cyt],C05223,cyt,Dodecanoyl-[acyl-carrier protein],16759,C12H23OSR,C12H23ORS,0,False
+C05306_[cyt],C05306,cyt,Chlorophyll a,18230,C55H72MgN4O5,C55H71MgN4O5,-1,False
+C05382_[cyt],C05382,cyt,Sedoheptulose 7-phosphate,15721,C7H15O10P,C7H13O10P,-2,False
+C05413_[cyt],C05413,cyt,Phytoene,8191,C40H64,C40H64,0,False
+C05414_[cyt],C05414,cyt,Phytofluene,28129,C40H62,C40H62,0,False
+C05427_[cyt],C05427,cyt,Phytyl diphosphate,18187,C20H42O7P2,C20H40O7P2,-2,False
+C05430_[cyt],C05430,cyt,zeta-Carotene,28068,C40H60,C40H60,0,False
+C05431_[cyt],C05431,cyt,Neurosporene,16833,C40H58,C40H58,0,False
+C05432_[cyt],C05432,cyt,Lycopene,15948,C40H56,C40H56,0,False
+C05435_[cyt],C05435,cyt,gamma-Carotene,27740,C40H56,C40H56,0,False
+C05744_[cyt],C05744,cyt,Acetoacetyl-[acp],2393,C4H5O2SR,C4H5O2RS,0,False
+C05745_[cyt],C05745,cyt,Butyryl-[acp],-,C4H7OSR,-,-,False
+C05746_[cyt],C05746,cyt,3-Oxohexanoyl-[acp],-,C6H9O2SR,-,-,False
+C05747_[cyt],C05747,cyt,(R)-3-Hydroxyhexanoyl-[acp],-,C6H11O2SR,-,-,False
+C05748_[cyt],C05748,cyt,trans-Hex-2-enoyl-[acp],-,C6H9OSR,-,-,False
+C05749_[cyt],C05749,cyt,Hexanoyl-[acp],-,C6H11OSR,-,-,False
+C05750_[cyt],C05750,cyt,3-Oxooctanoyl-[acp],-,C8H13O2SR,-,-,False
+C05751_[cyt],C05751,cyt,trans-Oct-2-enoyl-[acp],-,C8H13OSR,-,-,False
+C05752_[cyt],C05752,cyt,Octanoyl-[acp],7725,C8H15OSR,C8H15ORS,0,False
+C05753_[cyt],C05753,cyt,3-Oxodecanoyl-[acp],-,C10H17O2SR,-,-,False
+C05754_[cyt],C05754,cyt,trans-Dec-2-enoyl-[acp],-,C10H17OSR,-,-,False
+C05755_[cyt],C05755,cyt,Decanoyl-[acp],4349,C10H19OSR,C10H19ORS,0,False
+C05756_[cyt],C05756,cyt,3-Oxododecanoyl-[acp],-,C12H21O2SR,-,-,False
+C05757_[cyt],C05757,cyt,(R)-3-Hydroxydodecanoyl-[acp],-,C12H23O2SR,-,-,False
+C05758_[cyt],C05758,cyt,trans-Dodec-2-enoyl-[acp],-,C12H21OSR,-,-,False
+C05759_[cyt],C05759,cyt,3-Oxotetradecanoyl-[acp],-,C14H25O2SR,-,-,False
+C05760_[cyt],C05760,cyt,trans-Tetradec-2-enoyl-[acp],-,C14H25OSR,-,-,False
+C05761_[cyt],C05761,cyt,Tetradecanoyl-[acp],50651,C14H27OSR,C14H27ORS,0,False
+C05762_[cyt],C05762,cyt,3-Oxohexadecanoyl-[acp],1639,C16H29O2SR,C16H29O2RS,0,False
+C05763_[cyt],C05763,cyt,trans-Hexadec-2-enoyl-[acp],-,C16H29OSR,-,-,False
+C05764_[cyt],C05764,cyt,(9Z)-Hexadecanoyl-[acp],5697,C16H31OSR,C16H31ORS,0,False
+C05772_[cyt],C05772,cyt,Precorrin 3A,28307,C43H50N4O16,C43H43N4O16,-7,False
+C05775_[cyt],C05775,cyt,alpha-Ribazole,10329,C14H18N2O4,C14H18N2O4,0,False
+C05817_[cyt],C05817,cyt,"(1R,6R)-6-Hydroxy-2-succinylcyclohexa-2,4-diene-1-carboxylate",39564,C11H12O6,C11H10O6,-2,False
+C05840_[cyt],C05840,cyt,Iminoaspartate,50616,C4H5NO4,C4H3NO4,-2,False
+C05897_[cyt],C05897,cyt,"Undecaprenyl-diphospho-N-acetylmuramoyl-L-alanyl-D-glutamyl-meso-2,6-diaminopimeloyl-D-alanyl-D-alanine",-,C87H143N7O23P2,-,-,False
+C05898_[cyt],C05898,cyt,"Undecaprenyl-diphospho-N-acetylmuramoyl-(N-acetylglucosamine)-L-alanyl-D-glutamyl-meso-2,6-diaminopimeloyl-D-alanyl-D-alanine",28138,C95H156N8O28P2,C95H152N8O28P2,-4,False
+C05925_[cyt],C05925,cyt,Dihydroneopterin phosphate,48954,C9H14N5O7P,C9H12N5O7P,-2,False
+C05946_[cyt],C05946,cyt,D-4-Hydroxy-2-oxoglutarate,4083,C5H6O6,C5H4O6,-2,False
+C05947_[cyt],C05947,cyt,L-erythro-4-Hydroxyglutamate,6331,C5H9NO5,C5H8NO5,-1,False
+C06006_[cyt],C06006,cyt,(S)-2-Aceto-2-hydroxybutanoate,27681,C6H10O4,C6H9O4,-1,False
+C06007_[cyt],C06007,cyt,"(R)-2,3-Dihydroxy-3-methylpentanoate",27512,C6H12O4,C6H11O4,-1,False
+C06022_[cyt],C06022,cyt,UDP-3-O-(3-hydroxytetradecanoyl)-D-glucosamine,27392,C29H51N3O18P2,C29H49N3O18P2,-2,False
+C06032_[cyt],C06032,cyt,D-erythro-3-Methylmalate,27394,C5H8O5,C5H6O5,-2,False
+C06037_DGDG_[cyt],C06037,cyt,Digalactosyl-diacylglycerol_DGDG,28396,C17H26O15R2,C17H26O15R2,0,False
+C06054_[cyt],C06054,cyt,2-Oxo-3-hydroxy-4-phosphobutanoate,27951,C4H7O8P,C4H4O8P,-3,False
+C06055_[cyt],C06055,cyt,O-Phospho-4-hydroxy-L-threonine,18336,C4H10NO7P,C4H8NO7P,-2,False
+C06098_[cyt],C06098,cyt,Zeaxanthin,27547,C40H56O2,C40H56O2,0,False
+C06143_[cyt],C06143,cyt,Poly-beta-hydroxybutyrate,-,C4H6O2R,-,-,False
+C06156_[cyt],C06156,cyt,alpha-D-Glucosamine 1-phosphate,27625,C6H14NO8P,C6H12NO8P,-2,False
+C06232_[cyt],C06232,cyt,Molybdate,36264,MoH2O4,H2MoO4,0,False
+C06232_[ext],C06232,ext,Molybdate,36264,MoH2O4,H2MoO4,0,True
+C06319_[cyt],C06319,cyt,Precorrin 6Y,27858,C44H56N4O16,C44H50N4O16,-6,False
+C06320_[cyt],C06320,cyt,Precorrin 6X,27513,C44H54N4O16,C44H47N4O16,-7,False
+C06399_[cyt],C06399,cyt,Hydrogenobyrinate,17926,C45H60N4O14,C45H54N4O14,-6,False
+C06406_[cyt],C06406,cyt,Precorrin 3B,27711,C43H50N4O17,C43H43N4O17,-7,False
+C06407_[cyt],C06407,cyt,Precorrin 4,16430,C44H52N4O17,C44H44N4O17,-8,False
+C06408_[cyt],C06408,cyt,Precorrin 8X,28629,C45H60N4O14,C45H53N4O14,-7,False
+C06416_[cyt],C06416,cyt,Precorrin 5,27630,C45H54N4O17,C45H46N4O17,-8,False
+C06503_[cyt],C06503,cyt,"Hydrogenobyrinate a,c diamide",27914,C45H62N6O12,C45H58N6O12,-4,False
+C06504_[cyt],C06504,cyt,"Cob(II)yrinate a,c diamide",27937,C45H61CoN6O12,C45CoH56N6O12,-4,False
+C06505_[cyt],C06505,cyt,"Cob(I)yrinate a,c diamide",28531,C45H61CoN6O12,C45CoH57N6O12,-4,False
+C06506_[cyt],C06506,cyt,"Adenosyl cobyrinate a,c diamide",2482,C55H73CoN11O15,C55CoH68N11O15,-4,False
+C06507_[cyt],C06507,cyt,Adenosyl cobyrinate hexaamide,2483,C55H77CoN15O11,C55CoH76N15O11,0,False
+C06509_[cyt],C06509,cyt,Adenosyl cobinamide phosphate,2481,C58H85CoN16O14P,C58CoH83N16O14P,-1,False
+C06510_[cyt],C06510,cyt,Adenosine-GDP-cobinamide,2479,C68H97CoN21O21P2,C68CoH95N21O21P2,-1,False
+C06704_[cyt],C06704,cyt,Iron chelate,-,R,-,-,False
+C06704_[ext],C06704,ext,Iron chelate,-,R,-,-,True
+C07335_[cyt],C07335,cyt,2-Amino-3-oxo-4-phosphonooxybutyrate,16273,C4H8NO7P,C4H6NO7P,-2,False
+C08591_[cyt],C08591,cyt,beta-Cryptoxanthin,10362,C40H56O,C40H56O,0,False
+C08592_[cyt],C08592,cyt,Echinenone,4746,C40H54O,C40H54O,0,False
+C10385_[cym],C10385,cym,Plastoquinone-9,28377,C53H80O2,C53H80O2,0,False
+C10385_[cyt],C10385,cyt,Plastoquinone-9,28377,C53H80O2,C53H80O2,0,False
+C10385_[tlm],C10385,tlm,Plastoquinone-9,28377,C53H80O2,C53H80O2,0,False
+C10385_B6_S_[cym],C10385,cym,Plastoquinone located at the stromal side of the Cytochrome-b6/f complex,28377,C53H80O2,C53H80O2,0,False
+C10385_B6_S_[tlm],C10385,tlm,Plastoquinone located at the stromal side of the Cytochrome-b6/f complex,28377,C53H80O2,C53H80O2,0,False
+C10517_[cyt],C10517,cyt,2-(beta-D-Glucosyl)-sn-glycerol 3-phosphate,16720,C9H19O11P,C9H17O11P,-2,False
+C11355_[cyt],C11355,cyt,4-Amino-4-deoxychorismate,18198,C10H11NO5,C10H10NO5,-1,False
+C11434_[cyt],C11434,cyt,2-C-Methyl-D-erythritol 4-phosphate,17764,C5H13O7P,C5H11O7P,-2,False
+C11435_[cyt],C11435,cyt,4-(Cytidine 5'-diphospho)-2-C-methyl-D-erythritol,16578,C14H25N3O14P2,C14H23N3O14P2,-2,False
+C11436_[cyt],C11436,cyt,2-Phospho-4-(cytidine 5'-diphospho)-2-C-methyl-D-erythritol,16840,C14H26N3O17P3,C14H22N3O17P3,-4,False
+C11437_[cyt],C11437,cyt,1-Deoxy-D-xylulose 5-phosphate,16493,C5H11O7P,C5H9O7P,-2,False
+C11453_[cyt],C11453,cyt,"2-C-Methyl-D-erythritol 2,4-cyclodiphosphate",18425,C5H12O9P2,C5H10O9P2,-2,False
+C11521_[cyt],C11521,cyt,UDP-6-sulfoquinovose,15855,C15H24N2O19P2S,C15H21N2O19P2S,-3,False
+C11546_[cyt],C11546,cyt,2-(beta-D-Glucosyl)-sn-glycerol,17765,C9H18O8,C9H18O8,0,False
+C11638_[cyt],C11638,cyt,3-Amino-2-oxopropyl phosphate,1449,C3H8NO5P,C3H7NO5P,-1,False
+C11811_[cyt],C11811,cyt,1-Hydroxy-2-methyl-2-butenyl 4-diphosphate,15664,C5H12O8P2,C5H10O8P2,-2,False
+C11829_[cyt],C11829,cyt,13(1)-Hydroxy-magnesium-protoporphyrin IX 13-monomethyl ester,15434,C35H34MgN4O5,C35H33MgN4O5,-1,False
+C11830_[cyt],C11830,cyt,13(1)-Oxo-magnesium-protoporphyrin IX 13-monomethyl ester,15433,C35H32MgN4O5,C35H31MgN4O5,-1,False
+C11831_[cyt],C11831,cyt,Divinylprotochlorophyllide,30619,C35H30MgN4O5,C35H28MgN4O5,-2,False
+C11907_[cyt],C11907,cyt,"4,6-Dideoxy-4-oxo-dTDP-D-glucose",-,C16H24N2O15P2,-,-,False
+C12147_[cyt],C12147,cyt,L-Threonine O-3-phosphate,37525,C4H10NO6P,C4H8NO6P,-2,False
+C13309_[cyt],C13309,cyt,"2-Phytyl-1,4-naphthoquinone",31087,C30H44O2,C30H44O2,0,False
+C13508_SQDG_[cyt],C13508,cyt,Sulfoquinovosyldiacylglycerol,-,C11H16O12SR2,-,-,False
+C14151_[cyt],C14151,cyt,delta-Tocopherol,47772,C27H46O2,C27H46O2,0,False
+C14152_[cyt],C14152,cyt,beta-Tocopherol,47771,C28H48O2,C28H48O2,0,False
+C14463_[cyt],C14463,cyt,(R)-3-Hydroxy-3-methyl-2-oxopentanoate,34008,C6H10O4,C6H9O4,-1,False
+C14818_[cyt],C14818,cyt,Fe2+,29033,Fe,Fe,2,False
+C14818_[ext],C14818,ext,Fe2+,29033,Fe,Fe,2,True
+C14819_[cyt],C14819,cyt,Fe3+,29034,Fe,Fe,3,False
+C14819_[ext],C14819,ext,Fe3+,29034,Fe,Fe,3,True
+C15547_[cyt],C15547,cyt,"1,4-Dihydroxy-2-naphthoyl-CoA",52668,C32H42N7O19P3S,C32H38N7O19P3S,-4,False
+C15556_[cyt],C15556,cyt,"3,4-Dihydroxy-2-butanone 4-phosphate",50606,C4H9O6P,C4H7O6P,-2,False
+C15667_[cyt],C15667,cyt,5-Carboxyamino-1-(5-phospho-D-ribosyl)imidazole,48000,C9H14N3O9P,C9H11N3O9P,-3,False
+C15670_[cyt],C15670,cyt,Heme A,61715,C49H56FeN4O6,C49FeH54N4O6,-2,False
+C15672_[cyt],C15672,cyt,Heme O,36301,C49H58FeN4O5,C49FeH56N4O5,-2,False
+C15811_[cyt],C15811,cyt,[Enzyme]-cysteine,-,C4H6N2O2SR2,-,-,True
+C15812_[cyt],C15812,cyt,[Enzyme]-S-sulfanylcysteine,-,C4H6N2O2S2R2,-,-,True
+C15882_[cyt],C15882,cyt,2-Methyl-6-phytylquinol,-,C27H46O2,-,-,False
+C15883_[cyt],C15883,cyt,"2,3-Dimethyl-5-phytylquinol",-,C28H48O2,-,-,False
+C15966_[cyt],C15966,cyt,3-Hydroxyechinenone,-,C40H54O2,-,-,False
+C16160_[cyt],C16160,cyt,Linoleoyl-[acyl-carrier protein],-,C18H31OSR,-,-,False
+C16161_[cyt],C16161,cyt,alpha-Linolenoyl-ACP,-,C18H29OSR,-,-,False
+C16219_[cyt],C16219,cyt,3-Oxostearoyl-[acp],-,C18H33O2SR,-,-,False
+C16220_[cyt],C16220,cyt,3-Hydroxyoctadecanoyl-[acp],-,C18H35O2SR,-,-,False
+C16221_[cyt],C16221,cyt,(2E)-Octadecenoyl-[acp],-,C18H33OSR,-,-,False
+C16519_[cyt],C16519,cyt,2-Succinyl-5-enolpyruvyl-6-hydroxy-3-cyclohexene-1-carboxylate,-,C14H16O9,-,-,False
+C16520_[cyt],C16520,cyt,Hexadecenoyl-[acyl-carrier protein],-,C16H29OSR,-,-,False
+C16695_[cym],C16695,cym,Plastoquinol-9,28026,C53H82O2,C53H82O2,0,False
+C16695_[tlm],C16695,tlm,Plastoquinol-9,28026,C53H82O2,C53H82O2,0,False
+C17556_[cyt],C17556,cyt,"di-trans,poly-cis-Undecaprenyl phosphate",60468,C55H91O4P,C55H89O4P,-2,False
+C17570_[cyt],C17570,cyt,"2-Methyl-6-solanyl-1,4-benzoquinol",-,C52H80O2,-,-,False
+E1_[ext],-,ext,Photon,-,R,-,-,True
+E1_[tlm],-,tlm,Photon,-,R,-,-,False
+E1_P680_[tlm],-,tlm,Photons with 680nm wavelength,-,R,-,-,False
+E1_P700_[tlm],-,tlm,Photons with 700nm wavelength,-,R,-,-,False
+E10_[cyt],-,cyt,Cyanophycin,-,C10H17N5O4R,-,-,False
+E10N_[cyt],-,cyt,Cyanophycin polymer,-,R,-,-,True
+E11_[cyt],-,cyt,Peptidoglycan,-,C37H59N7O20,-,-,False
+E17_[cyt],-,cyt,gamma-Linolenoyl-ACP        ,-,C18H29OSR,-,-,False
+E19_[cyt],-,cyt,5-Deoxy-D-ribose ,-,C5H10O4,-,-,False
+E19_[ext],-,ext,5-Deoxy-D-ribose ,-,C5H10O4,-,-,True
+E36_[cyt],-,cyt,Stearidonoyl-[acp],-,C18H27OSR,-,-,False
+HB2p_B6_[cym],-,cym,"Heme B located in the Cytochrome-b6/f complex, twice protonated",-,R,-,-,False
+HB2p_B6_[tlm],-,tlm,"Heme B located in the Cytochrome-b6/f complex, twice protonated",-,R,-,-,False
+HB3p_B6_[cym],-,cym,"Heme B located in the Cytochrome-b6/f complex, triply protonated ",-,R,-,-,False
+HB3p_B6_[tlm],-,tlm,"Heme B located in the Cytochrome-b6/f complex, triply protonated ",-,R,-,-,False
+ORieske_B6_[cym],-,cym,Oxidized rieske_B6,-,R,-,-,False
+ORieske_B6_[tlm],-,tlm,Oxidized rieske_B6,-,R,-,-,False
+P680_[tlm],-,tlm,Neutral reaction centre of the Photosystem II (light with 680 nm is sufficient for the excitation of the one reaction center),-,R,-,-,False
+P680p_[tlm],-,tlm,Positive charged reaction centre of the Photosystem II (light with 680 nm is sufficient for the excitation of the one reaction center),-,R,-,-,False
+P700_[tlm],-,tlm,Uncharged reaction centre of the Photosystem I (light with 700 nm is sufficient for the excitation of the one reaction center),-,R,-,-,False
+P700p_[tlm],-,tlm,Positive charged reaction centre of the Photosystem I (light with 700 nm is sufficient for the excitation of the one reaction center),-,R,-,-,False
+PQH_B6_L_[cym],-,cym,Plastosemiquinone located at the luminal side of the Cytochrome-b6/f complex,-,C53H81O2,-,-,False
+PQH_B6_L_[tlm],-,tlm,Plastosemiquinone located at the luminal side of the Cytochrome-b6/f complex,-,C53H81O2,-,-,False
+PQH_B6_S_[cym],-,cym,Plastosemiquinone located at the stromal side of the Cytochrome-b6/f complex,-,C53H81O2,-,-,False
+PQH_B6_S_[tlm],-,tlm,Plastosemiquinone located at the stromal side of the Cytochrome-b6/f complex,-,C53H81O2,-,-,False
+PQn_P680_[tlm],-,tlm,Semiplastoquinone radical loosely bound to the Photosystem II (can except one further electron),-,C53H81O2,-,-,False
+QA_P680_[tlm],-,tlm,Internal bound plastoquinone of the Photosystem II,-,C53H80O2,-,-,False
+QAn_P680_[tlm],-,tlm,Internal bound semiquinone radical of the Photosystem II ,-,C53H80O2,-,-,False
+RRieske_B6_[cym],-,cym,Reduced rieske_B6,-,R,-,-,False
+RRieske_B6_[tlm],-,tlm,Reduced rieske_B6,-,R,-,-,False
+S0_P680_[tlm],-,tlm,Starting state of a cluster of probably four manganese atoms ,-,R,-,-,False
+S1_P680_[tlm],-,tlm,First oxidation state of the cluster of manganese atoms in the Photosystem II (needed for water splitting),-,R,-,-,False
+S2_P680_[tlm],-,tlm,Second oxidation state of the cluster of manganese atoms in the Photosystem II (needed for water splitting),-,R,-,-,False
+S3_P680_[tlm],-,tlm,Third oxidation state of the cluster of manganese atoms in the Photosystem II (needed for water splitting),-,R,-,-,False
+S4_P680_[tlm],-,tlm,Fourth oxidation state of the cluster of manganese atoms in the Photosystem II (needed for water splitting),-,R,-,-,False
