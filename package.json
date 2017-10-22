@@ -1,15 +1,23 @@
 {
-  "name": "synechocystis-pathways",
+  "name": "sbml",
   "version": "1.0.0",
-  "description": "",
+  "description": "Load metabolic models from SBML files",
   "main": "js/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Nicolas Pope",
+  "license": "BSD 2-Clause",
   "dependencies": {
     "csv-parser": "^1.11.0",
     "xml2js": "^0.4.19"
+  },
+  "devDependencies": {
+    "browserify": "^14.5.0",
+    "grunt": "^1.0.1",
+    "grunt-browserify": "^5.2.0",
+    "grunt-contrib-uglify": "git+https://github.com/gruntjs/grunt-contrib-uglify.git#harmony",
+    "mocha": "^4.0.1",
+    "uglify-js": "git+https://github.com/mishoo/UglifyJS2.git#harmony"
   }
 }
