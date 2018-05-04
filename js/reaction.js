@@ -1,8 +1,11 @@
 let Metabolites = require('./metabolite.js');
 
+let reactions = {};
+
 function Reaction(id, genes, kegg, reactants, products, reversable) {
 	this.id = id;
-	this.genes = genes;
+	this.name = null;
+	//this.genes = genes;
 	this.enzyme = null;
 	this.kegg = kegg;
 	this.equation = null;
@@ -11,12 +14,40 @@ function Reaction(id, genes, kegg, reactants, products, reversable) {
 
 	this.metabolites = {};
 	this.enzymes = {};
+	this.genes = [];
 
 	this.inputs = reactants;
 	this.outputs = products;
 	this.reversable = reversable;
+	this.lower = 0.0;
+	this.upper = 1000.0;
+	this.original_lower = undefined;
+	this.original_upper = undefined;
+	this.flux = 0.0;
 
+	reactions[id] = this;
 	//if (this.equation !== null) this.parseEquation();
+}
+
+Reaction.prototype.setConstraints = function(l, u) {
+	if (l !== undefined) {
+		if (this.original_lower === undefined) this.original_lower = l;
+		this.lower = l;
+	}
+
+	if (u !== undefined) {
+		if (this.original_upper === undefined) this.original_upper = u;
+		this.upper = u;
+	}
+}
+
+Reaction.prototype.resetConstraints = function() {
+	this.lower = this.original_lower;
+	this.upper = this.original_upper;
+}
+
+Reaction.getById = function(id) {
+	return reactions[id];
 }
 
 /*Reaction.prototype.parseEquation = function() {

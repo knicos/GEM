@@ -14,6 +14,17 @@ module.exports = function (grunt) {
 
   grunt.initConfig({
 
+	'gh-pages': {
+		options: {
+			base: 'build',
+			add: false,
+			repo: 'https://github.com/knicos/SBML.git',
+			branch: 'gh-pages',
+			message: 'Deploy SBML Build'
+		},
+		src: ['latest/sbml.*']
+	},
+
 	browserify: {
 		'build/latest/sbml.js': ['js/exports.js']
 	},

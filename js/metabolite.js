@@ -5,12 +5,14 @@ function Metabolite(id, kegg, name, formula, charge, external) {
 	this.formula = formula;
 	this.charge = charge;
 	this.external = external;
+	this.compartment = null;
 
 	metabolite_index_id[id] = this;
 	metabolite_index_kegg[kegg] = this;
 
 	this.extra = null;
 	this.reactions = [];
+	this.index_reactions = {};
 }
 
 Metabolite.prototype.addAcronym = function(label) {
@@ -19,6 +21,9 @@ Metabolite.prototype.addAcronym = function(label) {
 }
 
 Metabolite.prototype.addReaction = function(r) {
+	// Must be UNIQUE
+	if (this.index_reactions.hasOwnProperty(r.id)) return;
+	this.index_reactions[r.id] = r;
 	this.reactions.push(r);
 }
 

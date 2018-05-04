@@ -8,5 +8,5 @@ exports.Enzymes = {};
 exports.Compartments = {};
 exports.fromFile = sbml.loadSBMLFile;
 exports.fromString = sbml.loadSBMLString;
-exports.fromURL = null;
+exports.fromURL = sbml.loadSBMLUrl;
 
