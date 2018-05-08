@@ -66,26 +66,25 @@ Metabolite.prototype.addReaction = function(r, consume) {
 	if (consume) this.consumers.push(r);
 	else {
 		this.producers.push(r);
-		this.updateSubsystem();
+		//this.updateSubsystem();
 	}
 }
 
 Metabolite.prototype.updateSubsystem = function() {
-	let t = {};
-	for (var i=0; i<this.producers.length; i++) {
-		if (!t.hasOwnProperty(this.producers[i].subsystem)) t[this.producers[i].subsystem] = 1;
-		else t[this.producers[i].subsystem]++;
-	}
+	if (this.producers.length == 0) return;
 
-	let mx = 0;
-	let mx_R = null;
-	for (var x in t) {
-		if (t[x] >= mx) {
-			mx = t[x];
-			mx_R = this.index_reactions[x];
+	// If all producers have the same subsystem then...
+	if (this.producers.length == 1) {
+		this.primary_subsystem = this.producers[0].subsystem;
+	} else {
+		for (var i=1; i<this.producers.length; i++) {
+			if (this.producers[i-1].subsystem != this.producers[i].subsystem) {
+				this.primary_subsystem = null;
+				return;
+			}
 		}
+		this.primary_subsystem = this.producers[0].subsystem;
 	}
-	this.primary_subsystem = mx_R;
 }
 
 let metabolite_index_id = {};
@@ -433,6 +432,9 @@ function loadSBMLString(data, cb) {
 			res.addToIndex(r.id, r.name, r);
 			//console.log(r);
 		}
+
+		// Process metabolites
+		for (var i=0; i<res.metabolites.length; i++) res.metabolites[i].updateSubsystem();
 
 		if (cb) cb(res);
 	});
