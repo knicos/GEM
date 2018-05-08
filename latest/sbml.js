@@ -40,6 +40,9 @@ function Metabolite(id, kegg, name, formula, charge, external) {
 	this.charge = charge;
 	this.external = external;
 	this.compartment = null;
+	this.producers = [];
+	this.consumers = [];
+	this.primary_subsystem = null;
 
 	metabolite_index_id[id] = this;
 	metabolite_index_kegg[kegg] = this;
@@ -54,11 +57,35 @@ Metabolite.prototype.addAcronym = function(label) {
 	metabolite_index_acr[label] = this;
 }
 
-Metabolite.prototype.addReaction = function(r) {
+Metabolite.prototype.addReaction = function(r, consume) {
 	// Must be UNIQUE
 	if (this.index_reactions.hasOwnProperty(r.id)) return;
 	this.index_reactions[r.id] = r;
 	this.reactions.push(r);
+
+	if (consume) this.consumers.push(r);
+	else {
+		this.producers.push(r);
+		this.updateSubsystem();
+	}
+}
+
+Metabolite.prototype.updateSubsystem = function() {
+	let t = {};
+	for (var i=0; i<this.producers.length; i++) {
+		if (!t.hasOwnProperty(this.producers[i].subsystem)) t[this.producers[i].subsystem] = 1;
+		else t[this.producers[i].subsystem]++;
+	}
+
+	let mx = 0;
+	let mx_R = null;
+	for (var x in t) {
+		if (t[x] >= mx) {
+			mx = t[x];
+			mx_R = this.index_reactions[x];
+		}
+	}
+	this.primary_subsystem = mx_R;
 }
 
 let metabolite_index_id = {};
@@ -165,7 +192,7 @@ Reaction.prototype.retrieveMetabolites = function() {
 		if (!this.metabolites[x]) {
 			console.error("Missing metabolite: ", x, this);
 		} else {
-			this.metabolites[x].addReaction(this);
+			this.metabolites[x].addReaction(this, true);
 		}
 	}
 
