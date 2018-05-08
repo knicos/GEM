@@ -42,7 +42,7 @@ function Metabolite(id, kegg, name, formula, charge, external) {
 	this.compartment = null;
 	this.producers = [];
 	this.consumers = [];
-	this.primary_subsystem = null;
+	this.subsystems = null;
 
 	metabolite_index_id[id] = this;
 	metabolite_index_kegg[kegg] = this;
@@ -66,7 +66,6 @@ Metabolite.prototype.addReaction = function(r, consume) {
 	if (consume) this.consumers.push(r);
 	else {
 		this.producers.push(r);
-		this.updateSubsystem();
 	}
 }
 
@@ -77,15 +76,11 @@ Metabolite.prototype.updateSubsystem = function() {
 		else t[this.producers[i].subsystem]++;
 	}
 
-	let mx = 0;
-	let mx_R = null;
 	for (var x in t) {
-		if (t[x] >= mx) {
-			mx = t[x];
-			mx_R = x;
-		}
+		t[x] /= this.producers.length;
 	}
-	this.primary_subsystem = mx_R;
+
+	this.subsystems = t;
 }
 
 let metabolite_index_id = {};
