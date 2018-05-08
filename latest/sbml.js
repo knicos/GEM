@@ -82,7 +82,7 @@ Metabolite.prototype.updateSubsystem = function() {
 	for (var x in t) {
 		if (t[x] >= mx) {
 			mx = t[x];
-			mx_R = this.index_reactions[x];
+			mx_R = x;
 		}
 	}
 	this.primary_subsystem = mx_R;
