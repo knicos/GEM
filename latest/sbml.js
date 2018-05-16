@@ -80,7 +80,19 @@ Metabolite.prototype.updateSubsystem = function() {
 		t[x] /= this.producers.length;
 	}
 
-	this.subsystems = t;
+	this.producer_subsystems = t;
+
+	t = {};
+	for (var i=0; i<this.consumers.length; i++) {
+		if (!t.hasOwnProperty(this.consumers[i].subsystem)) t[this.consumers[i].subsystem] = 1;
+		else t[this.consumers[i].subsystem]++;
+	}
+
+	for (var x in t) {
+		t[x] /= this.consumers.length;
+	}
+
+	this.consumer_subsystems = t;
 }
 
 let metabolite_index_id = {};
