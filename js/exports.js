@@ -1,3 +1,3 @@
 
-window.SBML = require('./index.js');
+window.GEM = require('./index.js');
 

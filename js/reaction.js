@@ -2,52 +2,22 @@ let Metabolites = require('./metabolite.js');
 
 let reactions = {};
 
-function Reaction(id, genes, kegg, reactants, products, reversable) {
+function Reaction(id, name) {
 	this.id = id;
-	this.name = null;
-	//this.genes = genes;
-	this.enzyme = null;
-	this.kegg = kegg;
+	this.ec = null;
+	this.kegg = null;
+
+	this.name = name;
+	this.abbreviation = name;
 	this.equation = null;
-	//this.label = label;
-	this.pathway = null;
+	this.subsystem = null;
 
-	this.metabolites = {};
-	this.enzymes = {};
 	this.genes = [];
-
-	this.inputs = reactants;
-	this.outputs = products;
-	this.reversable = reversable;
+	this.reactants = {};
+	this.products = {};
+	this.reversable = false;
 	this.lower = 0.0;
-	this.upper = 1000.0;
-	this.original_lower = undefined;
-	this.original_upper = undefined;
-	this.flux = 0.0;
-
-	reactions[id] = this;
-	//if (this.equation !== null) this.parseEquation();
-}
-
-Reaction.prototype.setConstraints = function(l, u) {
-	if (l !== undefined) {
-		if (this.original_lower === undefined) this.original_lower = l;
-		this.lower = l;
-	}
-
-	if (u !== undefined) {
-		if (this.original_upper === undefined) this.original_upper = u;
-		this.upper = u;
-	}
-}
-
-Reaction.prototype.resetConstraints = function() {
-	this.lower = this.original_lower;
-	this.upper = this.original_upper;
-}
-
-Reaction.getById = function(id) {
-	return reactions[id];
+	this.upper = 99999999.0;
 }
 
 /*Reaction.prototype.parseEquation = function() {
@@ -74,43 +44,6 @@ Reaction.getById = function(id) {
 
 	if (lhs) this.inputs = parseExpression(lhs);
 	if (rhs) this.outputs = parseExpression(rhs);
-}*/
-
-Reaction.prototype.retrieveMetabolites = function() {
-	for (var x in this.inputs) {
-		this.metabolites[x] = Metabolites.getByID(x);
-		if (!this.metabolites[x]) {
-			console.error("Missing metabolite: ", x, this);
-		} else {
-			this.metabolites[x].addReaction(this);
-		}
-	}
-
-	for (var x in this.outputs) {
-		this.metabolites[x] = Metabolites.getByID(x);
-		if (!this.metabolites[x]) {
-			console.error("Missing metabolite: ", x, this);
-		} else {
-			this.metabolites[x].addReaction(this);
-		}
-	}
-}
-
-/*function parseExpression(e) {
-	let s = e.split("+");
-	let res = {};
-
-	for (var i=0; i<s.length; i++) {
-		let t = s[i].trim();
-		if (t.indexOf(" ") >= 0) {
-			let s2 = t.split(" ");
-			res[s2[1].replace(/[\[\]]/g, "")] = parseFloat(s2[0]);
-		} else {
-			res[t.replace(/[\[\]]/g, "")] = 1;
-		}
-	}
-
-	return res;
 }*/
 
 module.exports = Reaction;

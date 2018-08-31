@@ -1,100 +1,37 @@
 let xml2js = require('xml2js');
-let fs = require('fs');
 let Metabolite = require('./metabolite.js');
 let Reaction = require('./reaction.js');
 const Subsystem = require('./subsystem.js');
 const Compartment = require('./compartment.js');
 
-function SBML() {
-	this.name = "Unknown";
-	this.reactions = [];
-	this.metabolites = [];
-	this.index_reactions = {};
-	this.index_metabolites = {};
-	this.subsystems = {};
-	this.enzymes = {};
-	this.compartments = {};
-	this.genes = {};
-	this.index = {};
-}
+function processGenes(reaction, genes) {
+	let g = [];
+	reaction.genes = g;
 
-SBML.prototype.getReactionById = function(id) {
-	return this.index_reactions[id];
-}
+	genes = genes.replace(/[\(\)]/g, "");
 
-SBML.prototype.getMetaboliteById = function(id) {
-	return this.index_metabolites[id];
-}
 
-SBML.prototype.search = function(s) {
-	if (!s || s.length == 0) {
-		var res = [];
-		for (var x in this.subsystems) {
-			res.push(this.subsystems[x]);
-		}
-		return res;
-	}
-
-	var words = s.split(" ");
-
-	console.log("Search words", words);
-
-	var res = this.index[words[0]];
-	if (res && words.length == 1) return res;
-	res = [];
-
-	if (!res) {
-		// Regex search
-	} else {
-		// Filter by other words
-	}
-
-	return res;
-}
-
-SBML.prototype.addToIndex = function(id, name, item) {
-	var record = {};
-
-	if (id) {
-		var id2s = id.substring(2).split("_");
-		for (var i=0; i<id2s.length; i++) {
-			var label = id2s[i].toLowerCase();
-			if (!this.index.hasOwnProperty(label)) this.index[label] = [];
-			this.index[label].push(item);
-			record[label] = true;
-		}
-	}
-
-	if (name) {
-		var names = name.split(" ");
-		for (var i=0; i<names.length; i++) {
-			var label = names[i].toLowerCase();
-			if (record[label]) continue;
-			if (!this.index.hasOwnProperty(label)) this.index[label] = [];
-			this.index[label].push(item);
-		}
-	}
-}
-
-function processGenes(model, reaction, genes) {
-	if (genes.charAt(0) == "(") {
-		// TODO Split genes
-	} else {
 		var gs = genes.split(" and ");
+		if (gs.length == 1 && gs[0] == "") return;
+
 		for (var i=0; i<gs.length; i++) {
-			reaction.genes.push([gs[i]]);
-			if (model.genes.hasOwnProperty(gs[i]) == false) model.genes[gs[i]] = [];
-			model.genes[gs[i]].push(reaction);
+			let gors = gs[i].split(" or ");
+			if (gors.length == 1) g.push(gors[0]);
+			else g.push(gors);
 		}
-	}
 }
 
 function patchID(id) {
 	return id.replace(/_LPAREN_/g,"(").replace(/_RPAREN_/g,")").replace(/_DASH_/g, "-");
 }
 
-function loadSBMLString(data, cb) {
-	let res = new SBML();
+function loadSBMLString(data) {
+	let res = {
+		reactions: [],
+		metabolites: [],
+		compartments: []
+	};
+
 	let parser = new xml2js.Parser();
 	parser.parseString(data, function(err, result) {
 		var compartments = result.sbml.model[0].listOfCompartments[0].compartment;
@@ -107,30 +44,41 @@ function loadSBMLString(data, cb) {
 				data.$.id,
 				data.$.name
 			);
-			res.addToIndex(c.id, c.name, c);
-			res.compartments[c.id] = c;
+			//res.addToIndex(c.id, c.name, c);
+			res.compartments.push(c);
 		}
 
 		for (var i=0; i<metabolites.length; i++) {
 			let data = metabolites[i];
+			let notes = (data.notes) ? data.notes[0].body[0].p : [];
+
 			let m = new Metabolite(
 				data.$.id,
-				null,
 				data.$.name,
-				null,
-				null,
-				data.$.compartment == "e"
+				data.$.compartment
 			);
-			m.compartment = data.$.compartment;
 
-			if (!res.compartments[data.$.compartment]) {
-				console.error("Missing compartment");
-			} else {
-				res.compartments[data.$.compartment].addMetabolite(m);
+			for (var j=0; j<notes.length; j++) {
+				//console.log("NOTE", notes[j]);
+				var snote = notes[j].split(":");
+				switch (snote[0]) {
+				case "CHARGE"	:	m.charge = parseInt(snote[1].trim());
+									break;
+				case "FORMULA"	:	m.formula = snote[1].trim();
+									break;
+				}
 			}
+
+			// TODO Get CHARGE,FORMULA
+
+			//if (!res.compartments[data.$.compartment]) {
+			//	console.error("Missing compartment");
+			//} else {
+				//res.compartments[data.$.compartment].addMetabolite(m);
+			//}
 			res.metabolites.push(m);
-			res.index_metabolites[m.id] = m;
-			res.addToIndex(m.id, m.name, m);
+			//res.index_metabolites[m.id] = m;
+			//res.addToIndex(m.id, m.name, m);
 		}
 
 		//id, genes, kegg, reactants, products, reversable
@@ -161,22 +109,20 @@ function loadSBMLString(data, cb) {
 
 			let r = new Reaction(
 				data.$.id,
-				null,
-				null,
-				rs,
-				ps,
-				data.$.reversable != 'false'
+				data.$.name
 			);
-			r.name = data.$.name;
-			r.retrieveMetabolites();
+			r.products = ps;
+			r.reactants = rs;
+			r.reversable = data.$.reversible != 'false';
+			//r.retrieveMetabolites();
 
 			for (var j=0; j<kinParams.length; j++) {
 				if (kinParams[j].$.id == "UPPER_BOUND") {
 					r.upper = parseFloat(kinParams[j].$.value);
-					r.original_upper = r.upper;
+					//r.original_upper = r.upper;
 				} else if (kinParams[j].$.id == "LOWER_BOUND") {
 					r.lower = parseFloat(kinParams[j].$.value);
-					r.original_lower = r.lower;
+					//r.original_lower = r.lower;
 				}
 			}
 
@@ -184,96 +130,36 @@ function loadSBMLString(data, cb) {
 				//console.log("NOTE", notes[j]);
 				var snote = notes[j].split(":");
 				switch (snote[0]) {
-				case "GENE_ASSOCIATION"		:	processGenes(res, r, snote[1].trim());
+				case "GENE_ASSOCIATION"		:	processGenes(r, snote[1].trim());
 												break;
 				case "SUBSYSTEM"			:	r.subsystem = snote[1].trim();
-												if (res.subsystems.hasOwnProperty(r.subsystem) == false) {
-													res.subsystems[r.subsystem] = new Subsystem(r.subsystem);
-													res.addToIndex(undefined, r.subsystem, res.subsystems[r.subsystem]);
-												}
-												res.subsystems[r.subsystem].addReaction(r);
+												//if (res.subsystems.hasOwnProperty(r.subsystem) == false) {
+													//res.subsystems[r.subsystem] = new Subsystem(r.subsystem);
+													//res.addToIndex(undefined, r.subsystem, res.subsystems[r.subsystem]);
+												//}
+												//res.subsystems[r.subsystem].addReaction(r);
 												break;
 				case "EC Number"			:	r.ec = snote[1].trim();
 												break;
+				//AUTHORS
+				//Confidence
 				}
 			}
 
 			res.reactions.push(r);
-			res.index_reactions[r.id] = r;
-			res.addToIndex(r.id, r.name, r);
+			//res.index_reactions[r.id] = r;
+			//res.addToIndex(r.id, r.name, r);
 			//console.log(r);
 		}
 
-		if (cb) cb(res);
+		// Process metabolites
+		//for (var i=0; i<res.metabolites.length; i++) res.metabolites[i].updateSubsystem();
+
+		//if (cb) cb(res);
 	});
+
+	return res;
 }
 
-function loadSBMLFile(filename, cb) {
-	fs.readFile(filename, function(err, data) {
-		loadSBMLString(data, cb);
-	});
-}
-
-var isnode = false;
-var request = null;
-
-// Make sure we have ajax in node
-if (typeof XMLHttpRequest == "undefined") {
-	request = require('request');
-	isnode = true;
-}
-
-function ajax(options) {
-
-	if (isnode) {
-		request(options.url, function(error, response, body) {
-			if (error) options.error();
-			else options.success(body);
-		});
-	} else {
-		var xhr = new XMLHttpRequest();
-		//xhr.withCredentials = true;
-		xhr.open(options.type.toUpperCase(), options.url);
-		xhr.setRequestHeader('Content-Type', 'text/plain');
-		xhr.onreadystatechange = function() {
-			//console.log("RESPONSE",xhr,xhr.status, xhr.responseText);
-			if (xhr.readyState === XMLHttpRequest.DONE) {
-				if (xhr.status === 200) {
-					options.success(xhr.responseText);
-				} else {
-					options.error(xhr, xhr.status, xhr.responseText);
-				}
-			}
-		};
-
-		try {
-			if (options.data) {
-				xhr.send((options.data) ? JSON.stringify(options.data) : undefined);
-			} else {
-				xhr.send();
-			}
-		} catch(e) {
-			options.error(e);
-		}
-	}
-}
-
-function loadSBMLUrl(url, cb) {
-	ajax({
-		url: url,
-		type: "get",
-		dataType: "text/plain",
-		success: function(data) {
-			loadSBMLString(data, cb);
-		},
-		error: function() {
-			cb(null);
-		}
-	});
-}
-
-exports.SBML = SBML;
-exports.loadSBMLFile = loadSBMLFile;
-exports.loadSBMLString = loadSBMLString;
-exports.loadSBMLUrl = loadSBMLUrl;
+module.exports = loadSBMLString;
 

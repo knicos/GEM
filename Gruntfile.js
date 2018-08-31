@@ -22,7 +22,7 @@ module.exports = function (grunt) {
 			branch: 'gh-pages',
 			message: 'Deploy SBML Build'
 		},
-		src: ['latest/sbml.*']
+		src: ['latest/sbml.*', 'samples/*']
 	},
 
 	browserify: {

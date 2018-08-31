@@ -1,12 +1,18 @@
 {
   "name": "metabolic-model",
-  "version": "1.0.37",
+  "version": "1.0.39",
   "description": "Load metabolic models from SBML files or web databases",
   "main": "js/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-	"deploy": "grunt && cp -rf ./samples ./build && grunt gh-pages"
+    "test": "mocha test",
+    "deploy": "grunt && cp -rf ./samples ./build && grunt gh-pages"
   },
+  "keywords": [
+    "metabolic",
+    "model",
+    "gem",
+    "genome"
+  ],
   "author": "Nicolas Pope",
   "license": "BSD 2-Clause",
   "dependencies": {
@@ -21,6 +27,7 @@
     "grunt-contrib-uglify": "git+https://github.com/gruntjs/grunt-contrib-uglify.git#harmony",
     "grunt-gh-pages": "^2.0.0",
     "mocha": "^4.0.1",
-    "uglify-js": "git+https://github.com/mishoo/UglifyJS2.git#harmony"
+    "uglify-js": "git+https://github.com/mishoo/UglifyJS2.git#harmony",
+    "yargs": "^11.0.0"
   }
 }
