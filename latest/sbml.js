@@ -126,6 +126,16 @@ function Model(json) {
 		}
 	}
 
+	// Process Enzymes
+	this.enzymes = {};
+	for (var i=0; i<json.reactions.length; i++) {
+		let r = json.reactions[i];
+		if (r.ec && r.ec != "") {
+			if (!this.enzymes.hasOwnProperty(r.ec)) this.enzymes[r.ec] = [];
+			this.enzymes[r.ec].push(r);
+		}
+	}
+
 	// Make indices...
 	this.index_reactions = {};
 	this.index_metabolites = {};
